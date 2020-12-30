@@ -26,6 +26,15 @@ class _ProdukIntiwidState extends State<ProdukIntiwid> {
     "assets/images/bayer-5.png",
     "assets/images/bayer-6.png",
     "assets/images/bayer-7.png",
+    "assets/images/careray-1.png",
+    "assets/images/careray-2.png",
+    "assets/images/careray-3.png",
+    "assets/images/clear-1.png",
+    "assets/images/clear-2.png",
+    "assets/images/clear-3.png",
+    "assets/images/intiwid-1.png",
+    "assets/images/intiwid-2.png",
+    "assets/images/intiwid-3.png",
   ];
 
   List<Product> products = [
@@ -95,25 +104,13 @@ class _ProdukIntiwidState extends State<ProdukIntiwid> {
         description:
             "Bayer is a Life Science company with a more than 150-year history and core competencies in the areas of health care and agriculture. With our innovative products, we are contributing to finding solutions to some of the major challenges of our time.",
         price: "100",
-        productName: "Imaxeon Salientbrochure SINGLE"),
+        productName: "Medrad Spectics Solaris EP"),
     Product(
         image: "assets/images/bayer-5.png",
         description:
             "Bayer is a Life Science company with a more than 150-year history and core competencies in the areas of health care and agriculture. With our innovative products, we are contributing to finding solutions to some of the major challenges of our time.",
         price: "100",
-        productName: "MEDRAD STELLANT D"),
-    Product(
-        image: "assets/images/bayer-6.png",
-        description:
-            "Bayer is a Life Science company with a more than 150-year history and core competencies in the areas of health care and agriculture. With our innovative products, we are contributing to finding solutions to some of the major challenges of our time.",
-        price: "100",
-        productName: "Medrad Mark 7 Arterion Brochure"),
-    Product(
-        image: "assets/images/bayer-7.png",
-        description:
-            "Bayer is a Life Science company with a more than 150-year history and core competencies in the areas of health care and agriculture. With our innovative products, we are contributing to finding solutions to some of the major challenges of our time.",
-        price: "100",
-        productName: "Medrad Spectics Solaris EP"),
+        productName: "Medrad Stellan D"),
   ];
 
   GlobalKey<ScaffoldState> drawerKey = GlobalKey();

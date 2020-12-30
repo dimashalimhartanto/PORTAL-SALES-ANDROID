@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:PortalSales/helper/data.dart';
 import 'package:PortalSales/helper/widgets.dart';
 import 'package:PortalSales/models-article/categorie_model.dart';
 import 'package:PortalSales/views/categorie_news.dart';
@@ -27,14 +26,14 @@ class _BeritaSekarangState extends State<BeritaSekarang> {
   }
 
   @override
-  void initState() {
-    _loading = true;
-    // TODO: implement initState
-    super.initState();
+  // void initState() {
+  //   _loading = true;
+  //   // TODO: implement initState
+  //   super.initState();
 
-    categories = getCategories();
-    getNews();
-  }
+  //   categories = getCategories();
+  //   getNews();
+  // }
 
   @override
   Widget build(BuildContext context) {

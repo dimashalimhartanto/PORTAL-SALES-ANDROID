@@ -5,13 +5,12 @@ import 'package:flutter/material.dart';
 
 ///Notice that by default this class is not used
 ///Go to [home_page.dart] and replace [ExhibitionBottomSheet] with [ScrollableExhibitionSheet] to use it
-class ScrollableExhibitionSheet extends StatefulWidget {
+class MoreSales extends StatefulWidget {
   @override
-  _ScrollableExhibitionSheetState createState() =>
-      _ScrollableExhibitionSheetState();
+  _MoreSalesState createState() => _MoreSalesState();
 }
 
-class _ScrollableExhibitionSheetState extends State<ScrollableExhibitionSheet> {
+class _MoreSalesState extends State<MoreSales> {
   double initialPercentage = 0.15;
 
   @override

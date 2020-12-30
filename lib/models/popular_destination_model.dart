@@ -1,23 +1,35 @@
 class PopularDestinationModel {
-  String title;
-  String icon;
-  String route;
+  String namars;
+  String kota;
+  String foto;
 
-  PopularDestinationModel(this.title, this.icon);
+  PopularDestinationModel(this.namars, this.kota, this.foto);
 }
 
-List<PopularDestinationModel> populars = menuSales
-    .map((item) => PopularDestinationModel(item['name'], item['image']))
+List<PopularDestinationModel> populars = kunjunganSales
+    .map((item) =>
+        PopularDestinationModel(item['namars'], item['kota'], item['foto']))
     .toList();
 
-var menuSales = [
-  {"name": "Kunjungan\nRumah Sakit", "image": "assets/images/hospital.png"},
+var kunjunganSales = [
   {
-    "name": "Top Up",
-    "image": "assets/images/kunjungan.png",
+    "namars": "RS Pelita Insani",
+    "kota": "Indonesia",
+    "foto": "assets/images/kunjungan1.jpg",
   },
   {
-    "name": "Semua promo",
-    "image": "assets/images/resource.png",
+    "namars": "RS Pelita Insani",
+    "kota": "Banjarmasin",
+    "foto": "assets/images/kunjungan2.jpg",
+  },
+  {
+    "namars": "RS Pelita Insani",
+    "kota": "Banjarmasin",
+    "foto": "assets/images/kunjungan3.jpg",
+  },
+  {
+    "namars": "RS Pelita Insani",
+    "kota": "Banjarmasin",
+    "foto": "assets/images/kunjungan4.jpg",
   },
 ];

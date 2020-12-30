@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:PortalSales/tab_home/home_utama.dart';
+import 'package:flutter/material.dart';
 import 'package:rubber/rubber.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 
@@ -143,7 +143,7 @@ class _TabHomeState extends State<TabHome>
                     }
                     return true;
                   },
-                  child: HomeContent(
+                  child: HalamanUtamaIntiwid(
                     controller: rubberSheetScrollCtrl,
                   ),
                 ),

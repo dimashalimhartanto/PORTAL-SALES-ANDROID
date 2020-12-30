@@ -34,7 +34,7 @@ class _MainPageState extends State<MainPage> {
                   });
                 },
                 children: <Widget>[
-                  HomeContent(),
+                  HalamanUtamaIntiwid(),
                   ProdukIntiwid(),
                 ],
               ),

@@ -11,14 +11,14 @@ class ProductPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        centerTitle: false,
         title: Text(
           product.productName,
           style: TextStyle(
             color: Colors.black,
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Color(0xFF),
         brightness: Brightness.light,
         elevation: 0,
         actionsIconTheme: IconThemeData(color: Colors.black),

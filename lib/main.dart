@@ -1,6 +1,4 @@
-import 'package:PortalSales/tab_home/home_utama.dart';
 import 'package:flutter/material.dart';
-import 'package:PortalSales/screens/bottom_navigation/main_screen.dart';
 import 'package:PortalSales/screens/login_screen.dart';
 import 'package:PortalSales/screens/splash_screen.dart';
 
@@ -11,9 +9,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Intimedika Sales',
+      title: 'Intiwid Rispacs',
       theme: ThemeData(
-        primaryColor: Color(0xFF02B462),
+        primaryColor: Color(0xFF1e92c1),
       ),
       initialRoute: SplashScreen.id,
       routes: {

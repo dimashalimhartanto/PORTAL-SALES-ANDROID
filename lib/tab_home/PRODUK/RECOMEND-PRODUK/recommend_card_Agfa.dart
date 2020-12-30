@@ -1,18 +1,13 @@
-import 'package:PortalSales/tab_home/PRODUK/HomePage-Agfa.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 
 class RecommendCard extends StatelessWidget {
   final String imageUrl;
   final String title;
-  final String offerEnds;
-  final String startPrices;
-
-  RecommendCard(
-      {@required this.imageUrl,
-      @required this.title,
-      @required this.offerEnds,
-      @required this.startPrices});
+  RecommendCard({
+    @required this.imageUrl,
+    @required this.title,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,19 +17,14 @@ class RecommendCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(15.0),
       ),
       child: InkWell(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => ProdukIntiwid()),
-          );
-        },
+        onTap: () {},
         child: Container(
-          width: 380,
+          width: 250,
           child: Row(
             children: <Widget>[
               SizedBox(
-                width: 130,
-                height: 130,
+                width: 97,
+                height: 99,
                 child: Image.asset(
                   imageUrl,
                   fit: BoxFit.cover,
@@ -63,29 +53,15 @@ class RecommendCard extends StatelessWidget {
                         Icon(
                           Feather.tag,
                           color: Colors.grey[500],
-                          size: 16,
+                          size: 10,
                         ),
                         SizedBox(
                           height: 8,
                         ),
-                        Text(
-                          offerEnds,
-                          style: TextStyle(
-                            color: Colors.grey[500],
-                            fontSize: 12,
-                          ),
-                        )
                       ],
                     ),
                     SizedBox(
                       height: 8,
-                    ),
-                    Text(
-                      startPrices,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 12,
-                      ),
                     ),
                   ],
                 ),

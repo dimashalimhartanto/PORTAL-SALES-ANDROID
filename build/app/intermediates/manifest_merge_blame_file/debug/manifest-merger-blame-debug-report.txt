@@ -5,34 +5,36 @@
 5    android:versionName="1.0.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="21"
+8        android:minSdkVersion="28"
 9        android:targetSdkVersion="28" />
 10    <!--
 11         Flutter needs it to communicate with the running application
 12         to allow setting breakpoints, to provide hot reload, etc.
 13    -->
 14    <uses-permission android:name="android.permission.INTERNET" />
-14-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\debug\AndroidManifest.xml:6:5-66
-14-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\debug\AndroidManifest.xml:6:22-64
+14-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\debug\AndroidManifest.xml:6:5-66
+14-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\debug\AndroidManifest.xml:6:22-64
 15    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-15-->[:file_picker] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
-15-->[:file_picker] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\file_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
-16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
-16-->[:image_picker] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-81
-16-->[:image_picker] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-78
-17    <!-- <uses-sdk android:minSdkVersion="14" /> -->
-18    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-18-->[com.google.firebase:firebase-firestore:21.4.3] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\44c301587718e24c6820e2a7e78f16ab\jetified-firebase-firestore-21.4.3\AndroidManifest.xml:13:5-79
-18-->[com.google.firebase:firebase-firestore:21.4.3] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\44c301587718e24c6820e2a7e78f16ab\jetified-firebase-firestore-21.4.3\AndroidManifest.xml:13:22-76
-19    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
-19-->[com.google.android.gms:play-services-measurement-api:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1a6531fdf891b88b3701a5b8b67d8326\play-services-measurement-api-17.4.1\AndroidManifest.xml:24:5-68
-19-->[com.google.android.gms:play-services-measurement-api:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1a6531fdf891b88b3701a5b8b67d8326\play-services-measurement-api-17.4.1\AndroidManifest.xml:24:22-65
-20    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
-20-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3ec5b946cb7895308055f6858366a78b\firebase-iid-20.1.5\AndroidManifest.xml:26:5-82
-20-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3ec5b946cb7895308055f6858366a78b\firebase-iid-20.1.5\AndroidManifest.xml:26:22-79
-21    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-21-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:26:5-110
-21-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:26:22-107
+15-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-80
+15-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:7:22-77
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-81
+16-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-78
+17    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+17-->[:open_file] C:\APLIKASI-INTIWID\INTIWID2021\build\open_file\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-83
+17-->[:open_file] C:\APLIKASI-INTIWID\INTIWID2021\build\open_file\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-80
+18    <uses-permission android:name="android.permission.WAKE_LOCK" />
+18-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:25:5-68
+18-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:25:22-65
+19    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+19-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:26:5-79
+19-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:26:22-76
+20    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+20-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:27:5-81
+20-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:27:22-78
+21    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+21-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:28:5-77
+21-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:28:22-74
 22    <!--
 23 io.flutter.app.FlutterApplication is an android.app.Application that
 24         calls FlutterMain.startInitialization(this); in its onCreate method.
@@ -41,290 +43,391 @@
 27         FlutterApplication and put your custom class here.
 28    -->
 29    <application
-29-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:8:5-46:19
+29-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:8:5-52:19
 30        android:name="io.flutter.app.FlutterApplication"
-30-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:9:9-57
+30-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:9:9-57
 31        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-31-->[androidx.core:core:1.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1de2716b7f324846f2f49edc79430b9c\core-1.1.0\AndroidManifest.xml:24:18-86
+31-->[androidx.core:core:1.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\615cbc3b009c6ace60b4a000b7c5707b\core-1.1.0\AndroidManifest.xml:24:18-86
 32        android:debuggable="true"
 33        android:icon="@mipmap/ic_launcher"
-33-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:11:9-43
-34        android:label="portalsales" >
-34-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:10:9-36
-35        <activity
-35-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:12:9-40:20
-36            android:name="com.tr.gojekclone.MainActivity"
-36-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:13:13-41
-37            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-37-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:16:13-163
-38            android:hardwareAccelerated="true"
-38-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:17:13-47
-39            android:launchMode="singleTop"
-39-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:14:13-43
-40            android:theme="@style/LaunchTheme"
-40-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:15:13-47
-41            android:windowSoftInputMode="adjustResize" >
-41-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:18:13-55
-42
-43            <!--
-44                 Specifies an Android theme to apply to this Activity as soon as
-45                 the Android process has started. This theme is visible to the user
-46                 while the Flutter UI initializes. After that, this theme continues
-47                 to determine the Window background behind the Flutter UI.
-48            -->
-49            <meta-data
-49-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:23:13-26:17
-50                android:name="io.flutter.embedding.android.NormalTheme"
-50-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:24:15-70
-51                android:resource="@style/NormalTheme" />
-51-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:25:15-52
-52            <!--
-53                 Displays an Android View that continues showing the launch screen
-54                 Drawable until Flutter paints its first frame, then this splash
-55                 screen fades out. A splash screen is useful to avoid any visual
-56                 gap between the end of Android's launch screen and the painting of
-57                 Flutter's first frame.
-58            -->
-59            <meta-data
-59-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:32:13-35:17
-60                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-60-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:33:15-79
-61                android:resource="@drawable/launch_background" />
-61-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:34:15-61
-62
-63            <intent-filter>
-63-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:36:13-39:29
-64                <action android:name="android.intent.action.MAIN" />
-64-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:37:17-68
-64-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:37:25-66
-65
-66                <category android:name="android.intent.category.LAUNCHER" />
-66-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:38:17-76
-66-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:38:27-74
-67            </intent-filter>
-68        </activity>
-69        <!--
-70             Don't delete the meta-data below.
-71             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-72        -->
-73        <meta-data
-73-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:43:9-45:33
-74            android:name="flutterEmbedding"
-74-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:44:13-44
-75            android:value="2" />
-75-->C:\samid\DOWNLOADAN\gojek4.0-clone-master\android\app\src\main\AndroidManifest.xml:45:13-30
-76
-77        <provider
-77-->[:image_picker] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-19:20
-78            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-78-->[:image_picker] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-82
-79            android:authorities="com.tr.gojekclone.flutter.image_provider"
-79-->[:image_picker] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-74
-80            android:exported="false"
-80-->[:image_picker] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
-81            android:grantUriPermissions="true" >
-81-->[:image_picker] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-47
-82            <meta-data
-82-->[:image_picker] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-18:75
-83                android:name="android.support.FILE_PROVIDER_PATHS"
-83-->[:image_picker] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-67
-84                android:resource="@xml/flutter_image_picker_file_paths" />
-84-->[:image_picker] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-72
-85        </provider>
-86
-87        <service
-87-->[:cloud_firestore] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-12:19
-88            android:name="com.google.firebase.components.ComponentDiscoveryService"
-88-->[:cloud_firestore] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:8:18-89
-89            android:directBootAware="true"
-89-->[com.google.firebase:firebase-common:19.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\29d5d0f7ab5f6c3b5a4d113e5a72a1bc\jetified-firebase-common-19.3.0\AndroidManifest.xml:34:13-43
-90            android:exported="false" >
-90-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4b7019372ff6e940a8bbfb2db922fc0f\firebase-auth-19.3.1\AndroidManifest.xml:35:13-37
-91            <meta-data
-91-->[:cloud_firestore] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
-92                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
-92-->[:cloud_firestore] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-134
-93                android:value="com.google.firebase.components.ComponentRegistrar" />
-93-->[:cloud_firestore] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\cloud_firestore\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
-94            <meta-data
-94-->[:firebase_auth] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
-95                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
-95-->[:firebase_auth] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
-96                android:value="com.google.firebase.components.ComponentRegistrar" />
-96-->[:firebase_auth] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\firebase_auth\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
-97            <meta-data
-97-->[:firebase_core] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-11:85
-98                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
-98-->[:firebase_core] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:10:17-124
-99                android:value="com.google.firebase.components.ComponentRegistrar" />
-99-->[:firebase_core] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\firebase_core\intermediates\library_manifest\debug\AndroidManifest.xml:11:17-82
-100            <meta-data
-100-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4b7019372ff6e940a8bbfb2db922fc0f\firebase-auth-19.3.1\AndroidManifest.xml:36:13-38:85
-101                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-101-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4b7019372ff6e940a8bbfb2db922fc0f\firebase-auth-19.3.1\AndroidManifest.xml:37:17-109
-102                android:value="com.google.firebase.components.ComponentRegistrar" />
-102-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4b7019372ff6e940a8bbfb2db922fc0f\firebase-auth-19.3.1\AndroidManifest.xml:38:17-82
-103            <meta-data
-103-->[com.google.firebase:firebase-firestore:21.4.3] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\44c301587718e24c6820e2a7e78f16ab\jetified-firebase-firestore-21.4.3\AndroidManifest.xml:20:13-22:85
-104                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-104-->[com.google.firebase:firebase-firestore:21.4.3] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\44c301587718e24c6820e2a7e78f16ab\jetified-firebase-firestore-21.4.3\AndroidManifest.xml:21:17-111
-105                android:value="com.google.firebase.components.ComponentRegistrar" />
-105-->[com.google.firebase:firebase-firestore:21.4.3] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\44c301587718e24c6820e2a7e78f16ab\jetified-firebase-firestore-21.4.3\AndroidManifest.xml:22:17-82
-106            <meta-data
-106-->[com.google.android.gms:play-services-measurement-api:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1a6531fdf891b88b3701a5b8b67d8326\play-services-measurement-api-17.4.1\AndroidManifest.xml:30:13-32:85
-107                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-107-->[com.google.android.gms:play-services-measurement-api:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1a6531fdf891b88b3701a5b8b67d8326\play-services-measurement-api-17.4.1\AndroidManifest.xml:31:17-139
-108                android:value="com.google.firebase.components.ComponentRegistrar" />
-108-->[com.google.android.gms:play-services-measurement-api:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\1a6531fdf891b88b3701a5b8b67d8326\play-services-measurement-api-17.4.1\AndroidManifest.xml:32:17-82
-109            <meta-data
-109-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3ec5b946cb7895308055f6858366a78b\firebase-iid-20.1.5\AndroidManifest.xml:32:13-34:85
-110                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-110-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3ec5b946cb7895308055f6858366a78b\firebase-iid-20.1.5\AndroidManifest.xml:33:17-96
-111                android:value="com.google.firebase.components.ComponentRegistrar" />
-111-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3ec5b946cb7895308055f6858366a78b\firebase-iid-20.1.5\AndroidManifest.xml:34:17-82
-112            <meta-data
-112-->[com.google.firebase:firebase-installations:16.2.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\50554694df2211458110ccd3a0e86d25\firebase-installations-16.2.1\AndroidManifest.xml:17:13-19:85
-113                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-113-->[com.google.firebase:firebase-installations:16.2.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\50554694df2211458110ccd3a0e86d25\firebase-installations-16.2.1\AndroidManifest.xml:18:17-127
-114                android:value="com.google.firebase.components.ComponentRegistrar" />
-114-->[com.google.firebase:firebase-installations:16.2.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\50554694df2211458110ccd3a0e86d25\firebase-installations-16.2.1\AndroidManifest.xml:19:17-82
-115        </service>
-116
-117        <receiver
-117-->[:sms_otp_auto_verify] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
-118            android:name="com.oohyugi.sms_otp_auto_verify.SmsBroadcastReceiver"
-118-->[:sms_otp_auto_verify] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-80
-119            android:enabled="true"
-119-->[:sms_otp_auto_verify] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-35
-120            android:exported="true"
-120-->[:sms_otp_auto_verify] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-36
-121            android:permission="com.google.android.gms.auth.api.phone.permission.SEND" >
-121-->[:sms_otp_auto_verify] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-87
-122            <intent-filter>
-122-->[:sms_otp_auto_verify] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:29
-123                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
-123-->[:sms_otp_auto_verify] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-94
-123-->[:sms_otp_auto_verify] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:14:25-91
-124            </intent-filter>
-125        </receiver>
-126
-127        <activity
-127-->[:url_launcher] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
-128            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
-128-->[:url_launcher] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
-129            android:exported="false"
-129-->[:url_launcher] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
-130            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-130-->[:url_launcher] C:\samid\DOWNLOADAN\gojek4.0-clone-master\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
-131        <activity
-131-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5adea0256962c2bd79545109b66ee0c9\play-services-auth-17.0.0\AndroidManifest.xml:23:9-27:75
-132            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-132-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5adea0256962c2bd79545109b66ee0c9\play-services-auth-17.0.0\AndroidManifest.xml:24:13-93
-133            android:excludeFromRecents="true"
-133-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5adea0256962c2bd79545109b66ee0c9\play-services-auth-17.0.0\AndroidManifest.xml:25:13-46
-134            android:exported="false"
-134-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5adea0256962c2bd79545109b66ee0c9\play-services-auth-17.0.0\AndroidManifest.xml:26:13-37
-135            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-135-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5adea0256962c2bd79545109b66ee0c9\play-services-auth-17.0.0\AndroidManifest.xml:27:13-72
-136        <!--
-137            Service handling Google Sign-In user revocation. For apps that do not integrate with
-138            Google Sign-In, this service will never be started.
-139        -->
-140        <service
-140-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5adea0256962c2bd79545109b66ee0c9\play-services-auth-17.0.0\AndroidManifest.xml:33:9-36:110
-141            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-141-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5adea0256962c2bd79545109b66ee0c9\play-services-auth-17.0.0\AndroidManifest.xml:34:13-89
-142            android:exported="true"
-142-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5adea0256962c2bd79545109b66ee0c9\play-services-auth-17.0.0\AndroidManifest.xml:35:13-36
-143            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
-143-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\5adea0256962c2bd79545109b66ee0c9\play-services-auth-17.0.0\AndroidManifest.xml:36:13-107
-144
-145        <activity
-145-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4b7019372ff6e940a8bbfb2db922fc0f\firebase-auth-19.3.1\AndroidManifest.xml:24:9-31:50
-146            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-146-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4b7019372ff6e940a8bbfb2db922fc0f\firebase-auth-19.3.1\AndroidManifest.xml:25:13-85
-147            android:excludeFromRecents="true"
-147-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4b7019372ff6e940a8bbfb2db922fc0f\firebase-auth-19.3.1\AndroidManifest.xml:26:13-46
-148            android:exported="true"
-148-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4b7019372ff6e940a8bbfb2db922fc0f\firebase-auth-19.3.1\AndroidManifest.xml:27:13-36
-149            android:launchMode="singleTask"
-149-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4b7019372ff6e940a8bbfb2db922fc0f\firebase-auth-19.3.1\AndroidManifest.xml:28:13-44
-150            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-150-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4b7019372ff6e940a8bbfb2db922fc0f\firebase-auth-19.3.1\AndroidManifest.xml:29:13-102
-151            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-151-->[com.google.firebase:firebase-auth:19.3.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\4b7019372ff6e940a8bbfb2db922fc0f\firebase-auth-19.3.1\AndroidManifest.xml:30:13-72
-152
-153        <receiver
-153-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3ec5b946cb7895308055f6858366a78b\firebase-iid-20.1.5\AndroidManifest.xml:37:9-44:20
-154            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-154-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3ec5b946cb7895308055f6858366a78b\firebase-iid-20.1.5\AndroidManifest.xml:38:13-78
-155            android:exported="true"
-155-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3ec5b946cb7895308055f6858366a78b\firebase-iid-20.1.5\AndroidManifest.xml:39:13-36
-156            android:permission="com.google.android.c2dm.permission.SEND" >
-156-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3ec5b946cb7895308055f6858366a78b\firebase-iid-20.1.5\AndroidManifest.xml:40:13-73
-157            <intent-filter>
-157-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3ec5b946cb7895308055f6858366a78b\firebase-iid-20.1.5\AndroidManifest.xml:41:13-43:29
-158                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-158-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3ec5b946cb7895308055f6858366a78b\firebase-iid-20.1.5\AndroidManifest.xml:42:17-81
-158-->[com.google.firebase:firebase-iid:20.1.5] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\3ec5b946cb7895308055f6858366a78b\firebase-iid-20.1.5\AndroidManifest.xml:42:25-78
-159            </intent-filter>
-160        </receiver>
-161
-162        <activity
-162-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\0cb7c942e2174b5d3645c2fdb3e8c594\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
-163            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-163-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\0cb7c942e2174b5d3645c2fdb3e8c594\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
-164            android:exported="false"
-164-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\0cb7c942e2174b5d3645c2fdb3e8c594\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
-165            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-165-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\0cb7c942e2174b5d3645c2fdb3e8c594\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
-166
-167        <provider
-167-->[com.google.firebase:firebase-common:19.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\29d5d0f7ab5f6c3b5a4d113e5a72a1bc\jetified-firebase-common-19.3.0\AndroidManifest.xml:26:9-30:39
-168            android:name="com.google.firebase.provider.FirebaseInitProvider"
-168-->[com.google.firebase:firebase-common:19.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\29d5d0f7ab5f6c3b5a4d113e5a72a1bc\jetified-firebase-common-19.3.0\AndroidManifest.xml:27:13-77
-169            android:authorities="com.tr.gojekclone.firebaseinitprovider"
-169-->[com.google.firebase:firebase-common:19.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\29d5d0f7ab5f6c3b5a4d113e5a72a1bc\jetified-firebase-common-19.3.0\AndroidManifest.xml:28:13-72
-170            android:exported="false"
-170-->[com.google.firebase:firebase-common:19.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\29d5d0f7ab5f6c3b5a4d113e5a72a1bc\jetified-firebase-common-19.3.0\AndroidManifest.xml:29:13-37
-171            android:initOrder="100" />
-171-->[com.google.firebase:firebase-common:19.3.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\29d5d0f7ab5f6c3b5a4d113e5a72a1bc\jetified-firebase-common-19.3.0\AndroidManifest.xml:30:13-36
-172
-173        <receiver
-173-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:29:9-33:20
-174            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-174-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:30:13-85
-175            android:enabled="true"
-175-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:31:13-35
-176            android:exported="false" >
-176-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:32:13-37
-177        </receiver>
-178
-179        <service
-179-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:35:9-38:40
-180            android:name="com.google.android.gms.measurement.AppMeasurementService"
-180-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:36:13-84
-181            android:enabled="true"
-181-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:37:13-35
-182            android:exported="false" />
-182-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:38:13-37
-183        <service
-183-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:39:9-43:72
-184            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-184-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:40:13-87
-185            android:enabled="true"
-185-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:41:13-35
-186            android:exported="false"
-186-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:42:13-37
-187            android:permission="android.permission.BIND_JOB_SERVICE" />
-187-->[com.google.android.gms:play-services-measurement:17.4.1] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\dc91ec66fd0225643364d387dd1e4343\play-services-measurement-17.4.1\AndroidManifest.xml:43:13-69
-188
-189        <meta-data
-189-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\363656b1dd5b6478a4da10be2e7aa200\jetified-play-services-basement-17.1.0\AndroidManifest.xml:23:9-25:69
-190            android:name="com.google.android.gms.version"
-190-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\363656b1dd5b6478a4da10be2e7aa200\jetified-play-services-basement-17.1.0\AndroidManifest.xml:24:13-58
-191            android:value="@integer/google_play_services_version" />
-191-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\363656b1dd5b6478a4da10be2e7aa200\jetified-play-services-basement-17.1.0\AndroidManifest.xml:25:13-66
-192    </application>
-193
-194</manifest>
+33-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:11:9-43
+34        android:label="Intiwid Rispacs"
+34-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:10:9-40
+35        android:requestLegacyExternalStorage="true" >
+35-->[:open_file] C:\APLIKASI-INTIWID\INTIWID2021\build\open_file\intermediates\library_manifest\debug\AndroidManifest.xml:11:18-61
+36        <activity
+36-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:12:9-46:20
+37            android:name="com.tr.gojekclone.MainActivity"
+37-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:13:13-41
+38            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+38-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:16:13-163
+39            android:hardwareAccelerated="true"
+39-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:17:13-47
+40            android:launchMode="singleTop"
+40-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:14:13-43
+41            android:theme="@style/LaunchTheme"
+41-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:15:13-47
+42            android:windowSoftInputMode="adjustResize" >
+42-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:18:13-55
+43
+44            <!--
+45                 Specifies an Android theme to apply to this Activity as soon as
+46                 the Android process has started. This theme is visible to the user
+47                 while the Flutter UI initializes. After that, this theme continues
+48                 to determine the Window background behind the Flutter UI.
+49            -->
+50            <meta-data
+50-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:23:13-26:17
+51                android:name="io.flutter.embedding.android.NormalTheme"
+51-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:24:15-70
+52                android:resource="@style/NormalTheme" />
+52-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:25:15-52
+53            <!--
+54                 Displays an Android View that continues showing the launch screen
+55                 Drawable until Flutter paints its first frame, then this splash
+56                 screen fades out. A splash screen is useful to avoid any visual
+57                 gap between the end of Android's launch screen and the painting of
+58                 Flutter's first frame.
+59            -->
+60            <meta-data
+60-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:32:13-35:17
+61                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+61-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:33:15-79
+62                android:resource="@drawable/launch_background" />
+62-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:34:15-61
+63
+64            <intent-filter>
+64-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:36:13-39:29
+65                <action android:name="android.intent.action.MAIN" />
+65-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:37:17-68
+65-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:37:25-66
+66
+67                <category android:name="android.intent.category.LAUNCHER" />
+67-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:38:17-76
+67-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:38:27-74
+68            </intent-filter>
+69            <intent-filter>
+69-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:42:15-45:19
+70                <action android:name="FLUTTER_NOTIFICATION_CLICK" />
+70-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:43:19-71
+70-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:43:27-68
+71
+72                <category android:name="android.intent.category.DEFAULT" />
+72-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:44:19-78
+72-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:44:29-75
+73            </intent-filter>
+74        </activity>
+75        <!--
+76             Don't delete the meta-data below.
+77             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+78        -->
+79        <meta-data
+79-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:49:9-51:33
+80            android:name="flutterEmbedding"
+80-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:50:13-44
+81            android:value="2" />
+81-->C:\APLIKASI-INTIWID\INTIWID2021\android\app\src\main\AndroidManifest.xml:51:13-30
+82
+83        <provider
+83-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:11:9-19:20
+84            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+84-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-82
+85            android:authorities="com.tr.gojekclone.flutter.image_provider"
+85-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-74
+86            android:exported="false"
+86-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-37
+87            android:grantUriPermissions="true" >
+87-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-47
+88            <meta-data
+88-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-18:75
+89                android:name="android.support.FILE_PROVIDER_PATHS"
+89-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-67
+90                android:resource="@xml/flutter_image_picker_file_paths" />
+90-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-72
+91        </provider>
+92
+93        <receiver
+93-->[:sms_otp_auto_verify] C:\APLIKASI-INTIWID\INTIWID2021\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-16:20
+94            android:name="com.oohyugi.sms_otp_auto_verify.SmsBroadcastReceiver"
+94-->[:sms_otp_auto_verify] C:\APLIKASI-INTIWID\INTIWID2021\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-80
+95            android:enabled="true"
+95-->[:sms_otp_auto_verify] C:\APLIKASI-INTIWID\INTIWID2021\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-35
+96            android:exported="true"
+96-->[:sms_otp_auto_verify] C:\APLIKASI-INTIWID\INTIWID2021\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-36
+97            android:permission="com.google.android.gms.auth.api.phone.permission.SEND" >
+97-->[:sms_otp_auto_verify] C:\APLIKASI-INTIWID\INTIWID2021\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-87
+98            <intent-filter>
+98-->[:sms_otp_auto_verify] C:\APLIKASI-INTIWID\INTIWID2021\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-15:29
+99                <action android:name="com.google.android.gms.auth.api.phone.SMS_RETRIEVED" />
+99-->[:sms_otp_auto_verify] C:\APLIKASI-INTIWID\INTIWID2021\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:14:17-94
+99-->[:sms_otp_auto_verify] C:\APLIKASI-INTIWID\INTIWID2021\build\sms_otp_auto_verify\intermediates\library_manifest\debug\AndroidManifest.xml:14:25-91
+100            </intent-filter>
+101        </receiver>
+102
+103        <provider
+103-->[:open_file] C:\APLIKASI-INTIWID\INTIWID2021\build\open_file\intermediates\library_manifest\debug\AndroidManifest.xml:12:9-21:20
+104            android:name="com.crazecoder.openfile.FileProvider"
+104-->[:open_file] C:\APLIKASI-INTIWID\INTIWID2021\build\open_file\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-64
+105            android:authorities="com.tr.gojekclone.fileProvider.com.crazecoder.openfile"
+105-->[:open_file] C:\APLIKASI-INTIWID\INTIWID2021\build\open_file\intermediates\library_manifest\debug\AndroidManifest.xml:14:13-88
+106            android:exported="false"
+106-->[:open_file] C:\APLIKASI-INTIWID\INTIWID2021\build\open_file\intermediates\library_manifest\debug\AndroidManifest.xml:15:13-37
+107            android:grantUriPermissions="true" >
+107-->[:open_file] C:\APLIKASI-INTIWID\INTIWID2021\build\open_file\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-47
+108            <meta-data
+108-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-18:75
+109                android:name="android.support.FILE_PROVIDER_PATHS"
+109-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-67
+110                android:resource="@xml/filepaths" />
+110-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-72
+111        </provider>
+112
+113        <activity
+113-->[:url_launcher] C:\APLIKASI-INTIWID\INTIWID2021\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:8:9-11:74
+114            android:name="io.flutter.plugins.urllauncher.WebViewActivity"
+114-->[:url_launcher] C:\APLIKASI-INTIWID\INTIWID2021\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:9:13-74
+115            android:exported="false"
+115-->[:url_launcher] C:\APLIKASI-INTIWID\INTIWID2021\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-37
+116            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+116-->[:url_launcher] C:\APLIKASI-INTIWID\INTIWID2021\build\url_launcher\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-71
+117
+118        <provider
+118-->[:flutter_webview_plugin] C:\APLIKASI-INTIWID\INTIWID2021\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:9:9-18:20
+119            android:name="androidx.core.content.FileProvider"
+119-->[:flutter_webview_plugin] C:\APLIKASI-INTIWID\INTIWID2021\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:10:13-62
+120            android:authorities="com.tr.gojekclone.fileprovider"
+120-->[:flutter_webview_plugin] C:\APLIKASI-INTIWID\INTIWID2021\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:11:13-64
+121            android:exported="false"
+121-->[:flutter_webview_plugin] C:\APLIKASI-INTIWID\INTIWID2021\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:12:13-37
+122            android:grantUriPermissions="true" >
+122-->[:flutter_webview_plugin] C:\APLIKASI-INTIWID\INTIWID2021\build\flutter_webview_plugin\intermediates\library_manifest\debug\AndroidManifest.xml:13:13-47
+123            <meta-data
+123-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:16:13-18:75
+124                android:name="android.support.FILE_PROVIDER_PATHS"
+124-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:17:17-67
+125                android:resource="@xml/filepaths" />
+125-->[:image_picker] C:\APLIKASI-INTIWID\INTIWID2021\build\image_picker\intermediates\library_manifest\debug\AndroidManifest.xml:18:17-72
+126        </provider>
+127
+128        <activity
+128-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\022a8c1b8f67b3b7e14a0a626d921026\play-services-auth-17.0.0\AndroidManifest.xml:23:9-27:75
+129            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+129-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\022a8c1b8f67b3b7e14a0a626d921026\play-services-auth-17.0.0\AndroidManifest.xml:24:13-93
+130            android:excludeFromRecents="true"
+130-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\022a8c1b8f67b3b7e14a0a626d921026\play-services-auth-17.0.0\AndroidManifest.xml:25:13-46
+131            android:exported="false"
+131-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\022a8c1b8f67b3b7e14a0a626d921026\play-services-auth-17.0.0\AndroidManifest.xml:26:13-37
+132            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+132-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\022a8c1b8f67b3b7e14a0a626d921026\play-services-auth-17.0.0\AndroidManifest.xml:27:13-72
+133        <!--
+134            Service handling Google Sign-In user revocation. For apps that do not integrate with
+135            Google Sign-In, this service will never be started.
+136        -->
+137        <service
+137-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\022a8c1b8f67b3b7e14a0a626d921026\play-services-auth-17.0.0\AndroidManifest.xml:33:9-36:110
+138            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+138-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\022a8c1b8f67b3b7e14a0a626d921026\play-services-auth-17.0.0\AndroidManifest.xml:34:13-89
+139            android:exported="true"
+139-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\022a8c1b8f67b3b7e14a0a626d921026\play-services-auth-17.0.0\AndroidManifest.xml:35:13-36
+140            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+140-->[com.google.android.gms:play-services-auth:17.0.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\022a8c1b8f67b3b7e14a0a626d921026\play-services-auth-17.0.0\AndroidManifest.xml:36:13-107
+141
+142        <activity
+142-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\adffe2894520da00d13b3d30c8932e81\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+143            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+143-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\adffe2894520da00d13b3d30c8932e81\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+144            android:exported="false"
+144-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\adffe2894520da00d13b3d30c8932e81\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+145            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+145-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\adffe2894520da00d13b3d30c8932e81\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+146
+147        <meta-data
+147-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\fd306bc63dd22810b1e53d31dd89767f\jetified-play-services-basement-17.1.0\AndroidManifest.xml:23:9-25:69
+148            android:name="com.google.android.gms.version"
+148-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\fd306bc63dd22810b1e53d31dd89767f\jetified-play-services-basement-17.1.0\AndroidManifest.xml:24:13-58
+149            android:value="@integer/google_play_services_version" />
+149-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\fd306bc63dd22810b1e53d31dd89767f\jetified-play-services-basement-17.1.0\AndroidManifest.xml:25:13-66
+150
+151        <provider
+151-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:31:9-37:35
+152            android:name="androidx.work.impl.WorkManagerInitializer"
+152-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:32:13-69
+153            android:authorities="com.tr.gojekclone.workmanager-init"
+153-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:33:13-68
+154            android:directBootAware="false"
+154-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:34:13-44
+155            android:exported="false"
+155-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:35:13-37
+156            android:multiprocess="true" />
+156-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:36:13-40
+157
+158        <service
+158-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:39:9-44:35
+159            android:name="androidx.work.impl.background.systemalarm.SystemAlarmService"
+159-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:40:13-88
+160            android:directBootAware="false"
+160-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:41:13-44
+161            android:enabled="@bool/enable_system_alarm_service_default"
+161-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:42:13-72
+162            android:exported="false" />
+162-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:43:13-37
+163        <service
+163-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:45:9-51:35
+164            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+164-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:46:13-84
+165            android:directBootAware="false"
+165-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:47:13-44
+166            android:enabled="@bool/enable_system_job_service_default"
+166-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:48:13-70
+167            android:exported="true"
+167-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:49:13-36
+168            android:permission="android.permission.BIND_JOB_SERVICE" />
+168-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:50:13-69
+169        <service
+169-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:52:9-57:35
+170            android:name="androidx.work.impl.foreground.SystemForegroundService"
+170-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:53:13-81
+171            android:directBootAware="false"
+171-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:54:13-44
+172            android:enabled="@bool/enable_system_foreground_service_default"
+172-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:55:13-77
+173            android:exported="false" />
+173-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:56:13-37
+174
+175        <receiver
+175-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:59:9-64:35
+176            android:name="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver"
+176-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:60:13-88
+177            android:directBootAware="false"
+177-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:61:13-44
+178            android:enabled="true"
+178-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:62:13-35
+179            android:exported="false" />
+179-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:63:13-37
+180        <receiver
+180-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:65:9-75:20
+181            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy"
+181-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:66:13-106
+182            android:directBootAware="false"
+182-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:67:13-44
+183            android:enabled="false"
+183-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:68:13-36
+184            android:exported="false" >
+184-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:69:13-37
+185            <intent-filter>
+185-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:71:13-74:29
+186                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+186-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:72:17-87
+186-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:72:25-84
+187                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+187-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:73:17-90
+187-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:73:25-87
+188            </intent-filter>
+189        </receiver>
+190        <receiver
+190-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:76:9-86:20
+191            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy"
+191-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:77:13-104
+192            android:directBootAware="false"
+192-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:78:13-44
+193            android:enabled="false"
+193-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:79:13-36
+194            android:exported="false" >
+194-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:80:13-37
+195            <intent-filter>
+195-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:82:13-85:29
+196                <action android:name="android.intent.action.BATTERY_OKAY" />
+196-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:83:17-77
+196-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:83:25-74
+197                <action android:name="android.intent.action.BATTERY_LOW" />
+197-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:84:17-76
+197-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:84:25-73
+198            </intent-filter>
+199        </receiver>
+200        <receiver
+200-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:87:9-97:20
+201            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy"
+201-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:88:13-104
+202            android:directBootAware="false"
+202-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:89:13-44
+203            android:enabled="false"
+203-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:90:13-36
+204            android:exported="false" >
+204-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:91:13-37
+205            <intent-filter>
+205-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:93:13-96:29
+206                <action android:name="android.intent.action.DEVICE_STORAGE_LOW" />
+206-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:94:17-83
+206-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:94:25-80
+207                <action android:name="android.intent.action.DEVICE_STORAGE_OK" />
+207-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:95:17-82
+207-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:95:25-79
+208            </intent-filter>
+209        </receiver>
+210        <receiver
+210-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:98:9-107:20
+211            android:name="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy"
+211-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:99:13-103
+212            android:directBootAware="false"
+212-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:100:13-44
+213            android:enabled="false"
+213-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:101:13-36
+214            android:exported="false" >
+214-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:102:13-37
+215            <intent-filter>
+215-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:104:13-106:29
+216                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+216-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:105:17-79
+216-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:105:25-76
+217            </intent-filter>
+218        </receiver>
+219        <receiver
+219-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:108:9-119:20
+220            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+220-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:109:13-88
+221            android:directBootAware="false"
+221-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:110:13-44
+222            android:enabled="false"
+222-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:111:13-36
+223            android:exported="false" >
+223-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:112:13-37
+224            <intent-filter>
+224-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:114:13-118:29
+225                <action android:name="android.intent.action.BOOT_COMPLETED" />
+225-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:115:17-79
+225-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:115:25-76
+226                <action android:name="android.intent.action.TIME_SET" />
+226-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:116:17-73
+226-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:116:25-70
+227                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+227-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:117:17-81
+227-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:117:25-78
+228            </intent-filter>
+229        </receiver>
+230        <receiver
+230-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:120:9-129:20
+231            android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"
+231-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:121:13-99
+232            android:directBootAware="false"
+232-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:122:13-44
+233            android:enabled="@bool/enable_system_alarm_service_default"
+233-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:123:13-72
+234            android:exported="false" >
+234-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:124:13-37
+235            <intent-filter>
+235-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:126:13-128:29
+236                <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />
+236-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:127:17-98
+236-->[androidx.work:work-runtime:2.3.4] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\18aa1d423b93a57048470dc8396b9f5a\work-runtime-2.3.4\AndroidManifest.xml:127:25-95
+237            </intent-filter>
+238        </receiver>
+239
+240        <service
+240-->[androidx.room:room-runtime:2.2.3] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\01ffb6b51e00394c0709666a5bffc91a\room-runtime-2.2.3\AndroidManifest.xml:25:9-27:40
+241            android:name="androidx.room.MultiInstanceInvalidationService"
+241-->[androidx.room:room-runtime:2.2.3] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\01ffb6b51e00394c0709666a5bffc91a\room-runtime-2.2.3\AndroidManifest.xml:26:13-74
+242            android:exported="false" />
+242-->[androidx.room:room-runtime:2.2.3] C:\Users\asus\.gradle\caches\transforms-2\files-2.1\01ffb6b51e00394c0709666a5bffc91a\room-runtime-2.2.3\AndroidManifest.xml:27:13-37
+243    </application>
+244
+245</manifest>

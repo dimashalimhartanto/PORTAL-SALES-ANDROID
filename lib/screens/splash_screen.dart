@@ -13,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Timer _timer;
 
   removeScreen() {
-    return _timer = Timer(Duration(seconds: 6), () {
+    return _timer = Timer(Duration(seconds: 7), () {
       Navigator.of(context).pushReplacementNamed(LoginScreen.id);
     });
   }
@@ -36,9 +36,9 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Theme.of(context).primaryColor,
       body: Center(
         child: Image(
-          width: 150,
+          width: 300,
           image: AssetImage(
-            "assets/images/logoportal.png",
+            "assets/images/logo3.png",
           ),
         ),
       ),

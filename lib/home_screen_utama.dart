@@ -1,15 +1,15 @@
-import 'dart:async';
 import 'dart:ui';
-import 'package:PortalSales/tab_chat/tab_chat.dart';
-import 'package:PortalSales/tab_home/tab_home.dart';
-import 'package:PortalSales/tab_promos/tab_promos.dart';
 import 'package:flutter/foundation.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
+import 'package:PortalSales/sliding_content.dart';
 import 'package:PortalSales/customlib/bubble_tab_indicator_custom.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:PortalSales/tab_chat/tab_chat.dart';
+import 'package:PortalSales/tab_home/tab_home.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
+import 'package:PortalSales/tab_promos/tab_promos.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -32,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
 
   final bubleTabIndicator = BubbleTabIndicator(
     indicatorHeight: 34.0,
-    indicatorColor: Color(0xff017893),
+    indicatorColor: Colors.white,
   );
 
   int activeTab = 1;
@@ -80,18 +80,18 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             return true;
           },
           child: Scaffold(
-            backgroundColor: Colors.transparent,
+            backgroundColor: Color(0xff1e92c1),
             body: SafeArea(
               child: Stack(
                 children: <Widget>[
-                  Center(
-                    child: new Image.asset(
-                      'assets/images/portalsales.jpg',
-                      width: size.width,
-                      height: size.height,
-                      fit: BoxFit.cover,
-                    ),
-                  ),
+                  // Center(
+                  //   child: new Image.asset(
+                  //     'assets/images/logo3.png',
+                  //     width: size.width,
+                  //     height: size.height,
+                  //     fit: BoxFit.cover,
+                  //   ),
+                  // ),
                   FractionallySizedBox(
                     widthFactor: widthFactor,
                     heightFactor: 1.0,
@@ -127,18 +127,21 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              SvgPicture.asset(
-                                'assets/icons/icon_promos.svg',
+                              Image.asset(
+                                'assets/images/exam-room.png',
                                 width: 22,
                               ),
                               SizedBox(
                                 width: 6,
                               ),
                               Text(
-                                'Promos',
+                                'Patient',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w700, fontSize: 14),
-                              ),
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 14,
+                                  color: Colors.black,
+                                ),
+                              )
                             ],
                           ),
                         ),
@@ -146,8 +149,8 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              SvgPicture.asset(
-                                'assets/icons/icon_home.svg',
+                              Image.asset(
+                                'assets/images/homeris.png',
                                 width: 22,
                               ),
                               SizedBox(
@@ -156,7 +159,10 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                               Text(
                                 'Home',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w700, fontSize: 14),
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 14,
+                                  color: Colors.black,
+                                ),
                               )
                             ],
                           ),
@@ -165,21 +171,224 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
-                              SvgPicture.asset(
-                                'assets/icons/icon_chat.svg',
+                              Image.asset(
+                                'assets/images/workloadris.png',
                                 width: 22,
                               ),
                               SizedBox(
                                 width: 6,
                               ),
                               Text(
-                                'Chat',
+                                'Worklist',
                                 style: TextStyle(
-                                    fontWeight: FontWeight.w700, fontSize: 14),
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 14,
+                                  color: Colors.black,
+                                ),
                               )
                             ],
                           ),
                         ),
+                      ],
+                    ),
+                  ),
+                  slidingSheetBuilder(),
+                ],
+              ),
+            ),
+          ),
+        ),
+      );
+    });
+  }
+
+  Widget slidingSheetBuilder() {
+    return AnimatedBuilder(
+      animation: Listenable.merge([
+        sliderPosition,
+        sliderTransformController,
+        tabController.animation,
+      ]),
+      builder: (ctx, child) {
+        return Transform.translate(
+            offset: Offset(
+                (tabController.animation.value - 1) * pageViewWidth * -1,
+                sliderTransformAnimation.value),
+            child: slidingPanel());
+      },
+    );
+  }
+
+  Widget slidingPanel() {
+    double margin = 24 * (-sliderPosition.value + 1);
+    double marginFooter = sliderPosition.value * 48;
+    double border = 50 * (-sliderPosition.value + 1);
+    double footerOpacity() {
+      if (sliderPosition.value == 0)
+        return 1.0;
+      else if (sliderPosition.value <= .20) {
+        return 1 - (sliderPosition.value * 4);
+      } else
+        return 0.0;
+    }
+
+    return SlidingUpPanel(
+      controller: panelController,
+      onPanelSlide: (position) {
+        sliderPosition.value = position;
+      },
+      boxShadow: [
+        BoxShadow(
+          color: Colors.transparent,
+          spreadRadius: 1,
+          // blurRadius: 90,
+          offset: Offset(0, 3), // changes position of shadow
+        ),
+      ],
+      header: Container(
+        width: MediaQuery.of(context).size.width - 48 + marginFooter,
+        height: 12,
+        child: Align(
+          alignment: Alignment.bottomCenter,
+          child: Container(
+            width: 35,
+            height: 4,
+            decoration: BoxDecoration(
+                color: Color(0xff1e92c1),
+                borderRadius: BorderRadius.circular(50)),
+          ),
+        ),
+      ),
+      footer: Opacity(
+        opacity: footerOpacity(),
+        child: Center(
+          child: Container(
+            height: 85,
+            padding: EdgeInsets.symmetric(horizontal: 12),
+            width: MediaQuery.of(context).size.width - 48 + marginFooter,
+            child: Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          InkWell(
+                            onTap: () {},
+                            child: Container(
+                              height: 40,
+                              width: 40,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(100),
+                                  color: Colors.transparent),
+                              child: Align(
+                                child: Image.asset(
+                                  'assets/images/excel.png',
+                                  width: 28,
+                                  height: 28,
+                                ),
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 8,
+                          ),
+                          Text(
+                            'Excel',
+                            style: TextStyle(
+                                fontSize: 14, fontWeight: FontWeight.w400),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(100),
+                              color: Colors.transparent),
+                          child: Align(
+                            child: Image.asset(
+                              'assets/images/aboutris.png',
+                              width: 30,
+                              height: 30,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'About',
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.w400),
+                        )
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(100),
+                              color: Colors.transparent),
+                          child: Align(
+                            child: Image.asset(
+                              'assets/images/settings.png',
+                              width: 28,
+                              height: 28,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'Settings',
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.w400),
+                        )
+                      ],
+                    ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(100),
+                              color: Colors.transparent),
+                          child: Align(
+                            child: Image.asset(
+                              'assets/images/userris.png',
+                              width: 28,
+                              height: 28,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 8,
+                        ),
+                        Text(
+                          'About Us',
+                          style: TextStyle(
+                              fontSize: 14, fontWeight: FontWeight.w400),
+                        )
                       ],
                     ),
                   ),
@@ -188,7 +397,22 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
             ),
           ),
         ),
-      );
-    });
+      ),
+      borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(50),
+          topRight: Radius.circular(50),
+          bottomLeft: Radius.circular(border),
+          bottomRight: Radius.circular(border)),
+      margin: EdgeInsets.all(margin),
+      backdropColor: Colors.black,
+      backdropEnabled: true,
+      maxHeight: MediaQuery.of(context).size.height,
+      minHeight: 95,
+      panelBuilder: (scrollController) {
+        return Opacity(
+            opacity: sliderPosition.value < .20 ? 0.0 : sliderPosition.value,
+            child: slidingContent(scrollController));
+      },
+    );
   }
 }

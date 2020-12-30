@@ -1,43 +1,44 @@
-import 'package:PortalSales/MENU-SALES/RESOURCE_SALES.dart';
-import 'package:PortalSales/MENU-SALES/constant.dart';
-import 'package:PortalSales/MENU-SALES/LAPORAN-KUNJUNGAN.dart';
-import 'package:PortalSales/MENU-SALES/more_sales.dart';
-import 'package:PortalSales/colors.dart';
-import 'package:PortalSales/constants/color_constant.dart';
+import 'package:PortalSales/REPORT_INTIWID/HomeWorklist.dart';
+import 'package:PortalSales/main_html.dart';
+import 'package:PortalSales/model/models.dart';
+import 'package:PortalSales/tab_home/Radiographer.dart';
+import 'package:PortalSales/tab_home/Template.dart';
+import 'package:PortalSales/tab_home/intiwid_icon_menu.dart';
 import 'package:PortalSales/constants/style_constant.dart';
-import 'package:PortalSales/models/carousel_model.dart';
-import 'package:PortalSales/models/category.dart';
-import 'package:PortalSales/models/models.dart';
-import 'package:PortalSales/models/popular_destination_model.dart';
-import 'package:PortalSales/models/travlog_model.dart';
 import 'package:PortalSales/shared/shared.dart';
-import 'package:PortalSales/tab_home/PRODUK/HomePage-Agfa.dart';
-import 'package:PortalSales/tab_home/PRODUK/RECOMEND-PRODUK/recommend_card_Agfa.dart';
-import 'package:PortalSales/tab_home/destination_model.dart';
-import 'package:PortalSales/tab_home/destination_screen,.dart';
-import 'package:PortalSales/tab_home/menu-option.dart';
-import 'package:PortalSales/tab_home/pages/home_page.dart';
-import 'package:PortalSales/tab_home/pages/pages.dart';
-import 'package:PortalSales/views/newspage.dart';
-import 'package:PortalSales/widgets/widgets.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:PortalSales/customlib/scroll_snap_list_custom.dart';
-import 'package:PortalSales/tab_home/gopay_scroll_content.dart';
-import 'package:flutter_icons/flutter_icons.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:table_calendar/table_calendar.dart';
-import 'dart:math';
 import 'dart:ui';
 
-class HomeContent extends StatelessWidget {
+final List<String> imgList = [
+  'https://images.unsplash.com/photo-1581595219618-375a1a48d324?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
+  'https://images.unsplash.com/photo-1551076805-e1869033e561?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60',
+  'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80',
+];
+
+// ignore: must_be_immutable
+class HalamanUtamaIntiwid extends StatelessWidget {
+  AnimationController colorAnimationController;
+  Animation appBarColorTween, iconColorTween, fieldColorTween;
+
+  Brightness brightnessCutom = Brightness.dark;
+  ScrollController scrollControllerSingle;
+  int touchedIndex;
+
+  GlobalKey key = GlobalKey();
+  int minutCountdown = 300;
+  int secondCountdown = 59;
+  int current = 0;
+  int minuteShow = 4;
+  bool secondAppBar = false;
+  int selectedKategori = 0;
+  double containerHeight = 80;
+
   final ScrollController controller;
 
-  HomeContent({this.controller});
+  HalamanUtamaIntiwid({this.controller});
 
   GlobalKey<ScrollSnapListState> sslKey = GlobalKey();
   ScrollController gopayScrollCtrl;
@@ -50,6 +51,9 @@ class HomeContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double widthSize = MediaQuery.of(context).size.width;
+    List<Produk> produks = dummyProduk.sublist(0, 4);
+
     final double categoryHeight =
         MediaQuery.of(context).size.height * 0.30 - 50;
     gopayScrollCtrl = ScrollController();
@@ -80,10 +84,9 @@ class HomeContent extends StatelessWidget {
               Container(
                 margin: EdgeInsets.symmetric(horizontal: 20),
                 child: Row(
-                  children: <Widget>[search(), profileButton()],
+                  children: <Widget>[fotointiwid(), profileButton(), rispacs()],
                 ),
               ),
-              gopay(context),
               topPicks(),
               content(context),
               SizedBox(
@@ -107,26 +110,204 @@ class HomeContent extends StatelessWidget {
           SizedBox(
             height: 24,
           ),
+
+          // PENJELASAN
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: EdgeInsets.only(left: 16, top: 24, bottom: 12),
+            child: Text(
+              'MENU DOKTER',
+              style: mTitleStyle,
+            ),
+          ),
+          SizedBox(
+            height: 19,
+          ),
+          Container(
+            padding: EdgeInsets.all(15),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                SizedBox(
-                  height: 8,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => HomeWorklist()),
+                        );
+                      },
+                      child: IntiwidIconMenu(
+                        image: "assets/images/homeris.png",
+                        title: "Home",
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {},
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ReportWorklist()),
+                          );
+                        },
+                        child: IntiwidIconMenu(
+                          image: "assets/images/reportris.png",
+                          title: "Report",
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //       builder: (context) => RegistrasiDokter()),
+                        // );
+                      },
+                      child: IntiwidIconMenu(
+                        image: "assets/images/regis.png",
+                        title: "Registration",
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //       builder: (context) => PenawaranSales()),
+                        // );
+                      },
+                      child: IntiwidIconMenu(
+                        image: "assets/images/order.png",
+                        title: "Order",
+                      ),
+                    ),
+                  ],
                 ),
-                Text(
-                  'Product',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+                SizedBox(
+                  height: 18,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: <Widget>[
+                    InkWell(
+                      onTap: () {
+                        // Navigator.push(
+                        //   context,
+                        //   MaterialPageRoute(
+                        //       builder: (context) => HalamanBeranda()),
+                        // );
+                      },
+                      child: IntiwidIconMenu(
+                        image: "assets/images/exam-room.png",
+                        title: "Exam\nRoom",
+                      ),
+                    ),
+                    InkWell(
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => WorklistDokter()),
+                          );
+                        },
+                        child: IntiwidIconMenu(
+                          image: "assets/images/workloadris.png",
+                          title: "Worklist",
+                        ),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => TemplateDokter()),
+                        );
+                      },
+                      child: IntiwidIconMenu(
+                        image: "assets/images/templateris.png",
+                        title: "Template",
+                      ),
+                    ),
+                    InkWell(
+                      // onTap: () {
+                      //   Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => TemplateDokter()),
+                      //   );
+                      // },
+                      child: IntiwidIconMenu(
+                        image: "assets/images/chartris.png",
+                        title: "Charts",
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(
-                  height: 4,
+                  height: 19,
+                ),
+                // Row(
+                //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                //   children: <Widget>[
+                //     InkWell(
+                //       onTap: () {
+                //         // Navigator.push(
+                //         //   context,
+                //         //   MaterialPageRoute(
+                //         //       builder: (context) => HalamanBeranda()),
+                //         // );
+                //       },
+                //       child: IntiwidIconMenu(
+                //         image: "assets/images/excel.png",
+                //         title: "Excel",
+                //       ),
+                //     ),
+                //     InkWell(
+                //       child: InkWell(
+                //         onTap: () {},
+                //         child: IntiwidIconMenu(
+                //           image: "assets/images/aboutris.png",
+                //           title: "About",
+                //         ),
+                //       ),
+                //     ),
+                //     InkWell(
+                //       onTap: () {
+                //         // Navigator.push(
+                //         //   context,
+                //         //   MaterialPageRoute(
+                //         //       builder: (context) => Notifdokterris()),
+                //         // );
+                //       },
+                //       child: IntiwidIconMenu(
+                //         image: "assets/images/settings.png",
+                //         title: "settings",
+                //       ),
+                //     ),
+                //     InkWell(
+                //       child: InkWell(
+                //         onTap: () {},
+                //         child: IntiwidIconMenu(
+                //           image: "assets/images/userris.png",
+                //           title: "radiographer,",
+                //         ),
+                //       ),
+                //     ),
+                //   ],
+                // ),
+                SizedBox(
+                  height: 19,
                 ),
               ],
             ),
           ),
-          SizedBox(
-            height: 18,
+          Padding(
+            padding: EdgeInsets.only(left: 16, top: 24, bottom: 12),
           ),
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
@@ -134,8 +315,8 @@ class HomeContent extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Image.asset(
-                  'assets/images/agfa.png',
-                  width: 70,
+                  'assets/images/intimedika.png',
+                  width: 190,
                 ),
                 SizedBox(
                   height: 8,
@@ -143,990 +324,276 @@ class HomeContent extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            height: 20,
+          ),
+          // INTIMEDIKA IMAGES
           Container(
-            height: 150,
-            child: InkWell(
-              onTap: () {},
-              child: ListView(
-                physics: BouncingScrollPhysics(),
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  InkWell(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => ProdukIntiwid()),
-                      );
+            height: 250,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
+              color: mainColor,
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                CarouselSlider(
+                  options: CarouselOptions(
+                    autoPlay: true,
+                    enableInfiniteScroll: true,
+                    height: 250,
+                    enlargeCenterPage: false,
+                    viewportFraction: 1,
+                    onPageChanged: (index, reason) {
+                      setState(() {
+                        var current = index;
+                      });
                     },
-                    child: RecommendCard(
-                      imageUrl: 'assets/images/agfa-1.png',
-                      title: "DT2 B",
-                      offerEnds: "Modality & FIlm",
-                      startPrices:
-                          r"The Agfa-Gavaret Group develops, produces and distributes an extensive range of analog and digital imaging system and IT solution",
-                    ),
                   ),
-                  RecommendCard(
-                    imageUrl: 'assets/images/agfa-2.png',
-                    title: "CR 30- Xm",
-                    offerEnds: "Modality & FIlm",
-                    startPrices:
-                        r"The Agfa-Gavaret Group develops, produces and distributes an extensive range of analog and digital imaging system and IT solution",
-                  ),
-                  RecommendCard(
-                    imageUrl: 'assets/images/agfa-3.png',
-                    title: "DRYSTAR 5302",
-                    offerEnds: "Modality & Film",
-                    startPrices:
-                        r"The Agfa-Gravaret Group develops, produces and distributes an extensive range of analog and digital imaging system and IT solution",
-                  ),
-                  RecommendCard(
-                    imageUrl: 'assets/images/agfa-4.png',
-                    title: "DRYSTAR 5503",
-                    offerEnds: "Modality & Film",
-                    startPrices:
-                        r"The Agfa-Gravaret Group develops, produces and distributes an extensive range of analog and digital imaging system and IT solution",
-                  ),
-                  RecommendCard(
-                    imageUrl: 'assets/images/agfa-5.png',
-                    title: "DRYSTAR AXYS",
-                    offerEnds: "Modality & Film",
-                    startPrices:
-                        r"The Agfa-Gravet Group develops, produces and distributes an extensive range of analog and digital imaging system and IT solution",
-                  ),
-                  RecommendCard(
-                    imageUrl: 'assets/images/agfa-6.png',
-                    title: "CR 15-X",
-                    offerEnds: "Modality & Film",
-                    startPrices:
-                        r"The Agfa-Gravet Group develops, produces and distributes an extensive range of analog and digital imaging system and IT solution",
-                  ),
-                  RecommendCard(
-                    imageUrl: 'assets/images/agfa-7.png',
-                    title: "CR 12-X",
-                    offerEnds: "Modality & Film",
-                    startPrices:
-                        r"The Agfa-Gravet Group develops, produces and distributes an extensive range of analog and digital imaging system and IT solution",
+                  items: imgList
+                      .map(
+                        (item) => Container(
+                          width: double.infinity,
+                          height: 250,
+                          child: Container(
+                            width: double.infinity,
+                            child: Image.network(
+                              item,
+                              fit: BoxFit.fill,
+                              width: MediaQuery.of(context).size.width,
+                            ),
+                          ),
+                        ),
+                      )
+                      .toList(),
+                )
+              ],
+            ),
+          ),
+          SizedBox(
+            height: 18,
+          ),
+          Container(
+            height: 40,
+            width: widthSize,
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: defaultMargin),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Row(
+                    children: imgList.map((e) {
+                      int index = imgList.indexOf(e);
+                      return Container(
+                        height: 8,
+                        width: 8,
+                        margin: EdgeInsets.only(left: index == 0 ? 4 : 8),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: current == index ? mainColor : accentColor3,
+                        ),
+                      );
+                    }).toList(),
                   ),
                 ],
               ),
             ),
           ),
           SizedBox(
-            height: 18,
+            height: 19,
           ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Image.asset(
-                  'assets/images/bayer.png',
-                  width: 70,
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-              ],
-            ),
-          ),
+          // NOTE : KEJAR DISKON, LIHAT SEMUA
           Container(
-            height: 160,
-            child: ListView(
-              physics: BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                RecommendCard(
-                  imageUrl: 'assets/images/bayer-2.png',
-                  title: "Disposable Syringe",
-                  offerEnds: "Modality & BHP",
-                  startPrices:
-                      r"Bayer is a life Science company with a more than 150-year history and care competencies in the areas of healt care and agriculture.",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/bayer-2.png',
-                  title: "Disposable Syringe",
-                  offerEnds: "Modality & BHP",
-                  startPrices:
-                      r"Bayer is a life Science company with a more than 150-year history and care competencies in the areas of healt care and agriculture.",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/bayer-3.png',
-                  title: "Imaxeon Salient Brochure DUAL",
-                  offerEnds: "Modality & BHP",
-                  startPrices:
-                      r"Bayer is a life Science company with a more than 150-year history and care competencies in the areas of healt care and agriculture",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/bayer-4.png',
-                  title: "Imaxeon Salientbrochure SINGLE",
-                  offerEnds: "Modality & BHP",
-                  startPrices:
-                      r"Bayer is life Science company with a more than 150-year history and care competencies in the areas of healt care and agriculture",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/bayer-5.png',
-                  title: "MEDRAD STELLANT D",
-                  offerEnds: "Modality & BHP",
-                  startPrices:
-                      r"Bayer is life Science company with a more than 150-year history and care competencies in the areas of healt care and agriculture.",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/bayer-6.png',
-                  title: "Medrad Mark 7 Arterion Brochure",
-                  offerEnds: "Modality & BHP",
-                  startPrices:
-                      r"Bayer is life Science company with a more than 150-year history and care competencies in the areas of healt care and agriculture",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/bayer-7.png',
-                  title: "Medrad Spectics Solaris EP",
-                  offerEnds: "Modality & BHP",
-                  startPrices:
-                      r"Bayer is lofe Science company with a more than 150-year history and care competencies in the areas if healt care and agriculture.",
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 18,
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Image.asset(
-                  'assets/images/careray.png',
-                  width: 70,
-                ),
-                SizedBox(
-                  height: 8,
-                ),
-              ],
-            ),
-          ),
-          Container(
-            height: 130,
-            child: ListView(
-              physics: BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                RecommendCard(
-                  imageUrl: 'assets/images/careray-1.png',
-                  title: "CareView 750C",
-                  offerEnds: "DR",
-                  startPrices:
-                      r"CareRay is a global company dedicated to the innovative development of digital X-ray flat panel detectors. ",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/careray-2.png',
-                  title: "CareView 1500Cw",
-                  offerEnds: "DR",
-                  startPrices:
-                      r"CareRay is a global company dedicated to the innovative development of digital X-ray flat panel detectors.",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/careray-3.png',
-                  title: "CareView 1500L",
-                  offerEnds: "DR",
-                  startPrices:
-                      r"Careray is a global company dedicated to the innovative development of digital X-ray flat panel detectors.",
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 33,
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Image.asset(
-                  'assets/images/clear.png',
-                  width: 70,
-                ),
-                SizedBox(
-                  height: 8,
-                )
-              ],
-            ),
-          ),
-          Container(
-            height: 160,
-            child: ListView(
-              physics: BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                RecommendCard(
-                  imageUrl: 'assets/images/clear-1.png',
-                  title: "Medical Dry Film(Inkjet)",
-                  offerEnds: "Printer and Dry Film",
-                  startPrices:
-                      r"Clear was founded in 2008. It is the facilitator of the leading medical self-service system and intelligent medical health solutions.",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/clear-2.png',
-                  title: "Clear Specified INK",
-                  offerEnds: "Printer and Dry Film",
-                  startPrices:
-                      r"Clear was founded in 2008. It is the facilitator of the leading medical selft-services system and intelligent medical healt solutions.",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/clear-3.png',
-                  title: "Medical Film Printer Epson L1300",
-                  offerEnds: "Printer and Dry Film",
-                  startPrices:
-                      r"Clear was founded in 2008. It is the facilitator of the leading medical selft-services system and intelligent medical healt solutions.",
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 18,
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Image.asset(
-                  'assets/images/intiwid.png',
-                  width: 70,
-                ),
-                SizedBox(
-                  height: 8,
-                )
-              ],
-            ),
-          ),
-          Container(
-            height: 180,
-            child: ListView(
-              physics: BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                RecommendCard(
-                  imageUrl: 'assets/images/intiwid-1.png',
-                  title: "PACS",
-                  offerEnds: "RIS & PACS",
-                  startPrices:
-                      r"PACS is a system created and developed by PT. INTIMEDIKA PUSPA INDAH, Domestic products, which include RIS Features with Unlimited User License, Unlimited modality connectivity, Unlimited procedures per Annum that can be run on a Multi Operating System (OS).",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/intiwid-2.png',
-                  title: "RIS",
-                  offerEnds: "RIS & PACS",
-                  startPrices:
-                      r"PACS is a system created and developed by PT. INTIMEDIKA PUSPA INDAH, Domestic products, which include RIS Features with Unlimited User License, Unlimited modality connectivity, Unlimited procedures per Annum that can be run on a Multi Operating System (OS).",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/intiwid-3.png',
-                  title: "RISPACS",
-                  offerEnds: "RIS & PACS",
-                  startPrices:
-                      r"PACS is a system created and developed by PT. INTIMEDIKA PUSPA INDAH, Domestic products, which include RIS Features with Unlimited User License, Unlimited modality connectivity, Unlimited procedures per Annum that can be run on a Multi Operating System (OS).",
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 18,
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Image.asset(
-                  'assets/images/iradimed.png',
-                  width: 70,
-                ),
-                SizedBox(
-                  height: 8,
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 8,
-          ),
-          Container(
-            height: 160,
-            child: ListView(
-              physics: BouncingScrollPhysics(),
-              scrollDirection: Axis.horizontal,
-              children: <Widget>[
-                RecommendCard(
-                  imageUrl: 'assets/images/iradimed-1.png',
-                  title: "MRidium 3860",
-                  offerEnds: "Modality",
-                  startPrices:
-                      r"At IRadimed, we work hard every day to provide you with the best possible products and services while pushing the boundaries of technical innovation. ",
-                ),
-                RecommendCard(
-                  imageUrl: 'assets/images/iradimed-2.png',
-                  title: r"Portable MRI Monitoring System 3880",
-                  offerEnds: "Modality",
-                  startPrices:
-                      r"At IRadimed, we work hard every day to provide you with the best possible products and services while pushing the boundaries of technical innovation.",
-                ),
-              ],
-            ),
-          ),
-          SizedBox(
-            height: 18,
-          ),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
+            height: 50,
+            width: widthSize,
+            margin: EdgeInsets.symmetric(horizontal: defaultMargin),
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                SizedBox(
-                  height: 8,
-                ),
-                Text(
-                  'intimedika News',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
-                ),
-                SizedBox(
-                  height: 4,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "TRAINING DOKTER",
+                      style: blackTextFont.copyWith(
+                          fontSize: 18, fontWeight: FontWeight.w600),
+                    ),
+                  ],
                 ),
               ],
             ),
           ),
           Container(
-            height: 230,
-            padding: EdgeInsets.symmetric(vertical: 10),
-            child: ListView.builder(
-                itemCount: 1,
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                itemBuilder: (context, index) {
-                  return Container(
-                    height: 225,
-                    width: MediaQuery.of(context).size.width - 10,
-                    child: Align(
-                      child: Card(
-                        margin: EdgeInsets.only(
-                            left: index == 0 ? 10 : 20, right: 10),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => BeritaSekarang()),
-                                );
-                              },
-                              child: Container(
-                                decoration: BoxDecoration(
-                                    image: new DecorationImage(
-                                      image: new AssetImage(
-                                          "assets/gif/banner.gif"),
-                                    ),
-                                    borderRadius: BorderRadius.only(
-                                        topLeft: Radius.circular(8),
-                                        topRight: Radius.circular(8))),
-                                height: 120,
-                              ),
-                            ),
-                            Container(
-                              padding: EdgeInsets.all(12),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisSize: MainAxisSize.min,
-                                children: <Widget>[
-                                  Text(
-                                    'Update Berita Terkini',
-                                    style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w900),
-                                  ),
-                                  SizedBox(
-                                    height: 4,
-                                  ),
-                                  Text(
-                                      "anda dapat melihat beberapa berita terkini yang ada di indonesia.")
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  );
-                }),
-          ),
-          Padding(
-            padding: EdgeInsets.only(left: 16, top: 24, bottom: 12),
-            child: Text(
-              'INTIMEDIKA SALES',
-              style: mTitleStyle,
-            ),
+            width: double.infinity,
+            height: 8,
+            color: Colors.transparent,
           ),
           SizedBox(
-            height: 18,
+            height: 19,
           ),
-          Container(
-            alignment: Alignment.centerLeft,
-            margin: EdgeInsets.only(left: 16, right: 16),
-            width: MediaQuery.of(context).size.width,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: <Widget>[
-                Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: 195,
-                  child: Swiper(
-                    onIndexChanged: (index) {
-                      setState(() {
-                        var _current = index;
-                      });
-                    },
-                    autoplay: true,
-                    duration: 4000,
-                    layout: SwiperLayout.DEFAULT,
-                    itemCount: carousels.length,
-                    itemBuilder: (BuildContext context, index) {
-                      return Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(8),
-                          image: DecorationImage(
-                              image: AssetImage(
-                                carousels[index].image,
-                              ),
-                              fit: BoxFit.cover),
-                        ),
-                      );
-                    },
+          // FOTO 2
+          CarouselSlider(
+            items: [
+              Container(
+                margin: EdgeInsets.all(5.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  image: DecorationImage(
+                    image: AssetImage("assets/images/kunjungan1.jpg"),
+                    fit: BoxFit.cover,
                   ),
                 ),
-                SizedBox(
-                  height: 12,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      "",
+                      style: blackTextFont.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18.0,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Text(
+                        "Pemasangan PACS Intiwid di RS Pelita Insani - Banjarmasin, Kalimantan Selatan",
+                        style: blackTextFont.copyWith(
+                          color: Colors.white,
+                          fontSize: 15.0,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
                 ),
-              ],
+              ),
+              Container(
+                margin: EdgeInsets.all(5.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/kunjungan2.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      '',
+                      style: blackTextFont.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18.0,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Text(
+                        'Training PACS untuk Dokter RS Pelita Insani Banjarmasin Kalimantan Selatan - Indonesia.',
+                        style: blackTextFont.copyWith(
+                          color: Colors.white,
+                          fontSize: 15.0,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(5.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/kunjungan3.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      '',
+                      style: blackTextFont.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18.0,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Text(
+                        'Training PACS untuk Radiologi RS Pelita Insani Banjarmasin Kalimantan Selatan - Indonesia.',
+                        style: blackTextFont.copyWith(
+                          color: Colors.white,
+                          fontSize: 15.0,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.all(5.0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10.0),
+                  image: DecorationImage(
+                    image: AssetImage('assets/images/kunjungan4.jpg'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      '',
+                      style: blackTextFont.copyWith(
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18.0,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Text(
+                        'Training PACS untuk Radiologi RS Pelita Insani Banjarmasin Kalimantan Selatan - Indonesia.',
+                        style: blackTextFont.copyWith(
+                          color: Colors.white,
+                          fontSize: 15.0,
+                        ),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+            options: CarouselOptions(
+              autoPlay: false,
+              enableInfiniteScroll: true,
+              height: 250,
+              enlargeCenterPage: false,
+              viewportFraction: 1,
+              onPageChanged: (index, reason) {
+                setState(() {
+                  var current = index;
+                });
+              },
             ),
           ),
-
-          // PENJELASAN INTIMEDIKA
-          Padding(
-            padding: EdgeInsets.only(left: 16, top: 24, bottom: 12),
-            child: Text(
-              'MENU SALES',
-              style: mTitleStyle,
-            ),
-          ),
           SizedBox(
-            height: 19,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.assignment_ind,
-                          color: Colors.white,
-                          size: 20,
-                        )),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Center(
-                        child: Text(
-                          'Input\nKunjungan',
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => LaporanKunjunganHarian()),
-                        );
-                      },
-                      child: Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.date_range,
-                          color: Colors.white,
-                          size: 24,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Center(
-                      child: Text(
-                        "Laporan\nKunjungan",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Resource()),
-                        );
-                      },
-                      child: Container(
-                          height: 40,
-                          width: 40,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(100),
-                              color: Colors.orange[900]),
-                          child: Icon(
-                            Icons.call_split,
-                            color: Colors.white,
-                            size: 20,
-                          )),
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Center(
-                      child: Text(
-                        "Resource",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.arrow_upward,
-                          color: Colors.white,
-                          size: 20,
-                        )),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'Funnel',
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                    )
-                  ],
-                ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 19,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.assignment_ind,
-                          color: Colors.white,
-                          size: 20,
-                        )),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Center(
-                      child: Text(
-                        "View\nFunnel",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.date_range,
-                          color: Colors.white,
-                          size: 24,
-                        )),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Center(
-                      child: Text(
-                        "Sales\nActivity",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.description,
-                          color: Colors.white,
-                          size: 20,
-                        )),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'Direct\nOrder',
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.arrow_upward,
-                          color: Colors.white,
-                          size: 20,
-                        )),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'Reject',
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                    )
-                  ],
-                ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 19,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.assignment_ind,
-                          color: Colors.white,
-                          size: 20,
-                        )),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Center(
-                      child: Text(
-                        "Input\nFunnel",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.date_range,
-                          color: Colors.white,
-                          size: 24,
-                        )),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Center(
-                      child: Text(
-                        "Direct\nOrder",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.call_split,
-                          color: Colors.white,
-                          size: 20,
-                        )),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'Targeting',
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MenuMacamSales()),
-                        );
-                      },
-                      child: Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.more_horiz,
-                          color: Colors.white,
-                          size: 20,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'More',
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: 18,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.assignment_ind,
-                          color: Colors.white,
-                          size: 20,
-                        )),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Center(
-                      child: Text(
-                        "Input\nFunnel",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.date_range,
-                          color: Colors.white,
-                          size: 24,
-                        )),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Center(
-                      child: Text(
-                        "Direct\nOrder",
-                        textAlign: TextAlign.center,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.call_split,
-                          color: Colors.white,
-                          size: 20,
-                        )),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'Targeting',
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  children: <Widget>[
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => MenuMacamSales()),
-                        );
-                      },
-                      child: Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(100),
-                            color: Colors.orange[900]),
-                        child: Icon(
-                          Icons.more_horiz,
-                          color: Colors.white,
-                          size: 20,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      'More',
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w400),
-                    ),
-                  ],
-                ),
-              ),
-            ],
+            height: 20,
           ),
         ],
       ),
@@ -1134,30 +601,21 @@ class HomeContent extends StatelessWidget {
   }
 
   Widget topPicks() {
-    var selectedIndex = new ValueNotifier(0);
+    var selectedIndex = new ValueNotifier(1);
 
-    List<String> category = [
-      'Kunjungan',
-      'Rersource',
-      'Penawaran',
-      'Sales Activity',
-      'Target/Reject',
-      'Funnel',
-      'Product',
-      'Syringe',
-      'News',
-    ];
+    List<String> category = [];
 
     return Container(
       margin: EdgeInsets.only(top: 20),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              'Konten buat kamu',
-              style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900),
+              'Radiology Information System',
+              style: blackTextFont.copyWith(
+                  fontSize: 22, fontWeight: FontWeight.w900),
             ),
           ),
           AnimatedBuilder(
@@ -1190,7 +648,7 @@ class HomeContent extends StatelessWidget {
                       child: Center(
                         child: Text(
                           category[index],
-                          style: TextStyle(
+                          style: blackTextFont.copyWith(
                               color: index == selectedIndex.value
                                   ? Colors.white
                                   : Colors.grey[800],
@@ -1208,175 +666,50 @@ class HomeContent extends StatelessWidget {
     );
   }
 
-  Widget gopay(BuildContext context) {
-    return Container(
-      height: 100,
-      margin: EdgeInsets.only(top: 20, left: 20, right: 20),
-      decoration: BoxDecoration(
-          color: Colors.cyan[900], borderRadius: BorderRadius.circular(14)),
-      child: Row(
-        children: <Widget>[
-          SizedBox(
-            width: 4,
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width / 3,
-            height: 100,
-            child: ScrollSnapList(
-              onItemFocus: (index) {
-                itemListIndex.value = index;
-              },
-              itemSize: 75,
-              itemBuilder: (ctx, index) {
-                return Container(
-                  child: gopayScrollContent(
-                      index: index, scrollController: gopayScrollCtrl),
-                );
-              },
-              itemCount: 2,
-              duration: 100,
-              initialIndex: 1,
-              key: sslKey,
-              listController: gopayScrollCtrl,
-              dynamicItemSize: true,
-              scrollDirection: Axis.vertical,
-            ),
-          ),
-          SizedBox(
-            width: 8,
-          ),
-          Expanded(
-              child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Container(
-                  padding: EdgeInsets.all(3),
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.circular(8)),
-                  child: Icon(
-                    Icons.arrow_upward,
-                    size: 16,
-                    color: Color(0xff02ACD3),
-                  )),
-              SizedBox(
-                height: 6,
-              ),
-              Text(
-                'Pay',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w700),
-              )
-            ],
-          )),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Container(
-                    padding: EdgeInsets.all(3),
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.circular(8)),
-                    child: Icon(
-                      Icons.add,
-                      size: 16,
-                      color: Color(0xff02ACD3),
-                    )),
-                SizedBox(
-                  height: 6,
-                ),
-                Text(
-                  'Top Up',
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 14,
-                      fontWeight: FontWeight.w700),
-                )
-              ],
-            ),
-          ),
-          Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                InkWell(
-                  onTap: () {},
-                  child: Container(
-                      padding: EdgeInsets.all(3),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(8)),
-                      child: Icon(
-                        Icons.mail_outline_sharp,
-                        size: 16,
-                        color: Color(0xff02ACD3),
-                      )),
-                ),
-                SizedBox(
-                  height: 6,
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Text(
-                    'More',
-                    style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700),
-                  ),
-                )
-              ],
-            ),
-          ),
-          SizedBox(
-            width: 8,
-          ),
-        ],
-      ),
-    );
-  }
-
   Widget profileButton() {
     return InkWell(
       onTap: () {},
       child: Container(
-        width: 40,
+        width: 100,
         height: 40,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50), color: Colors.cyan[900]),
+            borderRadius: BorderRadius.circular(50), color: Colors.transparent),
+        // child: Align(
+        //   child: Image.asset(),
+        // ),
+      ),
+    );
+  }
+
+  Widget fotointiwid() {
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        width: 120,
+        height: 40,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(50), color: Colors.transparent),
         child: Align(
-          child: SvgPicture.asset(
-            'assets/icons/icon_profile.svg',
+          child: Image.asset(
+            "assets/images/intiwid2.png",
           ),
         ),
       ),
     );
   }
 
-  Widget search() {
-    return Expanded(
+  Widget rispacs() {
+    return InkWell(
+      onTap: () {},
       child: Container(
-        margin: EdgeInsets.only(right: 20),
+        width: 100,
         height: 40,
-        padding: EdgeInsets.symmetric(horizontal: 8),
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(50),
-            color: Colors.grey.withOpacity(.05),
-            border: Border.all(color: Colors.grey.withOpacity(.5), width: .5)),
-        child: Row(
-          children: <Widget>[
-            Center(child: Icon(Icons.search)),
-            SizedBox(
-              width: 8,
-            ),
-            Text(
-              'Agfa DRYSTAR 5302...',
-              style: TextStyle(color: Colors.grey[700], fontSize: 15),
-            )
-          ],
+            borderRadius: BorderRadius.circular(90), color: Colors.transparent),
+        child: Align(
+          child: Image.asset(
+            "assets/images/logo3.png",
+          ),
         ),
       ),
     );

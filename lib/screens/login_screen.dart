@@ -1,6 +1,6 @@
-import 'package:PortalSales/constant_2.dart';
-import 'package:PortalSales/home_screen_utama.dart';
-import 'package:country_code_picker/country_code_picker.dart';
+import 'package:PortalSales/MENU-SALES/constant.dart';
+import 'package:PortalSales/MENU-SALES/panduan_intiwid.dart';
+import 'package:PortalSales/screens/onboarding.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -47,8 +47,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               child: Opacity(
                 child: Image(
-                  width: 150,
-                  image: AssetImage("assets/images/logoportal.png"),
+                  width: 190,
+                  image: AssetImage("assets/images/logo3.png"),
                 ),
                 opacity: isKeyboardShowing ? 0.0 : 1.0,
               ),
@@ -59,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 left: fivePercentWidth(context),
               ),
               child: Text(
-                "Selamat Datang\nDiportal Sales",
+                "Welcome To\n Intiwid Rispacs",
                 style: kGrabWhiteBoldMedium,
               ),
             ),
@@ -71,7 +71,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 left: fivePercentWidth(context),
               ),
               child: Text(
-                "Enter your mobile number to continue",
+                "V.1.12",
                 style: kGrabWhiteRegularSmall,
               ),
             ),
@@ -82,56 +82,11 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               child: Row(
                 children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.grey[100],
-                    ),
-                    // margin: EdgeInsets.all(10),
-                    child: CountryCodePicker(
-                      // onChanged: print,
-
-                      initialSelection: 'ID',
-
-                      showCountryOnly: true,
-                      alignLeft: false,
-                    ),
-                  ),
                   SizedBox(width: 10),
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.6,
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(5),
-                      color: Colors.white,
-                    ),
-                    child: TextField(
-                      cursorColor: Theme.of(context).primaryColor,
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Masukan Email",
-                        hintStyle: kGrabWhiteRegularSmall.copyWith(
-                          color: Colors.grey,
-                        ),
-                      ),
-                      style: kGrabBlackBoldMedium,
-                      keyboardType: TextInputType.number,
-                      onTap: () {},
-                    ),
-                  ),
                 ],
               ),
             ),
             Spacer(flex: 2),
-            Opacity(
-              child: Center(
-                child: Text(
-                  "or continue with social account",
-                  style: kGrabWhiteRegularSmall,
-                ),
-              ),
-              opacity: isKeyboardShowing ? 0.0 : 1.0,
-            ),
             SizedBox(height: 10),
             Container(
               width: double.infinity,
@@ -142,12 +97,12 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               color: isKeyboardShowing
                   ? Theme.of(context).primaryColor
-                  : Colors.white,
+                  : Colors.transparent,
               child: isKeyboardShowing
                   ? FlatButton(
                       child: Center(
                           child: Text(
-                        "Continue",
+                        "Login",
                         style: kGrabWhiteRegularSmall,
                       )),
                       onPressed: () {},
@@ -155,91 +110,113 @@ class _LoginScreenState extends State<LoginScreen> {
                   : Row(
                       children: <Widget>[
                         Expanded(
-                          child: Container(
-                            margin: EdgeInsets.symmetric(
-                              horizontal: 10,
-                              vertical: 20,
-                            ),
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 15,
-                              vertical: 15,
-                            ),
-                            decoration: BoxDecoration(
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => OnboardingScreen()),
+                              );
+                            },
+                            child: Container(
+                              margin: EdgeInsets.symmetric(
+                                horizontal: 10,
+                                vertical: 20,
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 15,
+                                vertical: 15,
+                              ),
+                              decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
-                                color: Color(0xFF3C5A98),
+                                color: Color(0xFF85CBB3),
                                 boxShadow: [
                                   BoxShadow(
                                       // blurRadius: 10,
                                       offset: Offset.fromDirection(1)),
-                                ]),
-                            child: Row(
-                              children: <Widget>[
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) => HomeScreen()),
-                                    );
-                                  },
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(5),
-                                    child: Image(
-                                      color: Colors.white,
-                                      width: 30,
-                                      image: AssetImage(
-                                          "assets/images/facebook.png"),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  InkWell(
+                                    onTap: () {},
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(5),
+                                      child: Image(
+                                        width: 30,
+                                        image: AssetImage(
+                                            "assets/images/rispacs.png"),
+                                      ),
                                     ),
                                   ),
-                                ),
-                                Spacer(),
-                                Text(
-                                  "Facebook",
-                                  style: kGrabWhiteRegularSmall.copyWith(
-                                      fontSize: 18),
-                                ),
-                                Spacer(),
-                              ],
+                                  Spacer(),
+                                  Text(
+                                    "Let's Start",
+                                    style: kGrabWhiteRegularSmall.copyWith(
+                                        fontSize: 18),
+                                  ),
+                                  Spacer(),
+                                ],
+                              ),
                             ),
                           ),
                         ),
                         Expanded(
-                          child: Container(
-                            margin: EdgeInsets.symmetric(
-                              horizontal: 10,
-                              vertical: 20,
-                            ),
-                            padding: EdgeInsets.symmetric(
-                              horizontal: 15,
-                              vertical: 15,
-                            ),
-                            decoration: BoxDecoration(
+                          child: InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => PanduanIntiwid()),
+                              );
+                            },
+                            child: Container(
+                              margin: EdgeInsets.symmetric(
+                                horizontal: 10,
+                                vertical: 20,
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 15,
+                                vertical: 15,
+                              ),
+                              decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(8),
-                                color: Colors.white,
+                                color: Color(0xFF85CBB3),
                                 boxShadow: [
                                   BoxShadow(
                                       // blurRadius: 10,
                                       offset: Offset.fromDirection(1)),
-                                ]),
-                            child: Row(
-                              children: <Widget>[
-                                ClipRRect(
-                                  borderRadius: BorderRadius.circular(5),
-                                  child: Image(
-                                    // color: Colors.white,
-                                    width: 30,
-                                    image:
-                                        AssetImage("assets/images/google.png"),
+                                ],
+                              ),
+                              child: Row(
+                                children: <Widget>[
+                                  InkWell(
+                                    onTap: () {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) =>
+                                                PanduanIntiwid()),
+                                      );
+                                    },
+                                    child: ClipRRect(
+                                      borderRadius: BorderRadius.circular(5),
+                                      child: Image(
+                                        width: 30,
+                                        image: AssetImage(
+                                            "assets/images/rispacs.png"),
+                                      ),
+                                    ),
                                   ),
-                                ),
-                                Spacer(),
-                                Text(
-                                  "Google",
-                                  style: kGrabWhiteRegularSmall.copyWith(
-                                      fontSize: 18, color: Colors.grey[700]),
-                                ),
-                                Spacer(),
-                              ],
+                                  Spacer(),
+                                  Text(
+                                    "Read More ?",
+                                    style: kGrabWhiteRegularSmall.copyWith(
+                                        fontSize: 18),
+                                  ),
+                                  Spacer(),
+                                ],
+                              ),
                             ),
                           ),
                         ),

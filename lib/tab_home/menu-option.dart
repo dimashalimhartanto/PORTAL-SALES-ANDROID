@@ -15,7 +15,7 @@ class MenuOption extends StatelessWidget {
         aspectRatio: 1,
         child: Container(
           decoration: BoxDecoration(
-            color: selected ? Colors.cyan[900] : Colors.grey[200],
+            color: selected ? Colors.orange[900] : Colors.grey[200],
             borderRadius: BorderRadius.all(
               Radius.circular(25),
             ),

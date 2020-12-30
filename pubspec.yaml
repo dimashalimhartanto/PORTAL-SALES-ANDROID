@@ -19,90 +19,129 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  dio: ^3.0.9
-
-  font_awesome: ^5.10.1
-  multi_page_form: ^1.0.4
-  animated_text_kit: ^2.2.0
-  carousel_pro: ^1.0.0
-  csv: ^4.0.3
-  json_utilities: ^0.1.3
-  splashscreen: ^1.2.0
-  carousel_slider: ^2.2.1
-  intl: ^0.16.1
-  line_icons: ^0.2.0
-  shared_preferences: ^0.5.8
-  line_awesome_flutter: ^1.0.1
-  flutter_screenutil: ^1.0.2
-  animated_theme_switcher: ^1.0.5
-  stream_chat_flutter: ^0.1.35
-  get_it: ^4.0.0
-  uuid: ^2.0.4
-  custom_splash: ^0.0.2
-  fancy_bottom_navigation: ^0.3.2
-  rubber: ^0.4.0
-  sliding_up_panel: ^1.0.2
-  bubble_tab_indicator: "^0.1.4"
-  scroll_snap_list: ^0.4.1
-  json_serializable: ^3.2.3
-  sliding_card: ^0.1.2
-
-  dash_chat: ^1.1.10
-  url_launcher: ^5.2.0
-  flutter_chat_bar: ^0.0.1
-  table_calendar: ^2.2.3
-  horizontal_data_table: ^1.0.5+4
   animated_splash: ^1.0.0
-  flutter_stetho: ^0.5.0
-  flare_splash_screen: ^3.0.1
-  flutter_clean_calendar: ^1.0.2+1
-  spincircle_bottom_bar: ^1.0.0
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
+  animated_text_kit: ^2.2.0
+  animated_theme_switcher: ^1.0.5
+  badges: ^1.1.1
+  bloc: ^6.1.0
+  bottom_navy_bar: ^5.5.0
+  bubble_bottom_bar: ^1.2.0
+  bubble_tab_indicator: ^0.1.4
+  built_collection: ^4.3.2
+  built_value: ^7.1.0
+  cached_network_image: ^2.2.0+1
+  carousel_pro: ^1.0.0
+  carousel_slider: ^2.2.1
+  charts_flutter: ^0.9.0
+  country_code_picker: ^1.5.0
+  csslib: ^0.16.2
+  csv: ^4.0.3
   cupertino_icons: ^0.1.2
   curved_navigation_bar: ^0.3.3
-  titled_navigation_bar: ^4.1.0
-  flutter_rounded_date_picker: ^1.0.4
-  ff_navigation_bar: ^0.1.4
-  persistent_bottom_nav_bar: ^2.0.5
-  syncfusion_flutter_calendar: ^18.2.45
-  flutter_pdfview: ^1.0.0+10
-  path_provider: ^1.6.5
-  simple_animations: ^1.3.3
-  flutter_login: ^1.0.14
-  badges: ^1.1.1
-  lottie: ^0.4.0+1
-  google_fonts: ^1.1.0
-  cached_network_image: ^2.2.0+1
-  bubble_bottom_bar: ^1.2.0
-  webview_flutter: ^0.3.19+9
-  smooth_page_indicator: ^0.2.0
-  permission_handler: ^5.0.0+hotfix.9
-  sliding_sheet: ^0.3.7
-  sms_otp_auto_verify: ^1.2.2
-  giffy_dialog: ^1.8.0
-  flutter_icons: ^1.1.0
-  font_awesome_flutter: ^8.8.1
-  eva_icons_flutter: ^2.0.1
-  flutter_swiper: ^1.1.6
+  custom_splash: ^0.0.2
+  dash_chat: ^1.1.10
   data_tables: ^1.0.3
-  http: ^0.12.2
-  flutter_custom_clippers: ^1.1.2
-  file_picker: ^1.13.3
-  cloud_firestore: ^0.14.0+2
-  firebase_auth: ^0.18.0+1
-  keyboard_visibility: ^0.5.6
-  bottom_navy_bar: ^5.5.0
+  date_format: ^1.0.9
+  date_utils: ^0.1.0+3
+  dio: ^3.0.9
   direct_select_flutter: ^1.0.6
-  flutter_rating_bar: ^3.0.1+1
-  flutter_staggered_grid_view: ^0.3.2
-  fluttertoast: ^7.1.1
+  dropdownfield: ^1.0.3
+  dynamic_theme: ^1.0.1
+  equatable: ^1.2.5
+  eva_icons_flutter: ^2.0.1
+  excel: ^1.1.5
+  expandable: ^4.1.4
+  fancy_bottom_navigation: ^0.3.2
+  ff_navigation_bar: ^0.1.4
+  fl_chart: ^0.12.0
+  flare_splash_screen: ^3.0.1
   flushbar: ^1.10.4
-  flutter_svg: ^0.19.0
-  country_code_picker: ^1.5.0
+  flutter_bloc: ^6.1.1
+  flutter_calendar: ^0.0.1
+  flutter_calendar_carousel: ^1.3.18
+  flutter_chat_bar: ^0.0.1
+  flutter_clean_calendar: ^1.0.1
+  flutter_custom_clippers: ^1.1.2
+  flutter_file_manager: ^0.2.0
+  flutter_html: ^1.0.2
+  flutter_icons: ^1.1.0
+  flutter_login: ^1.0.14
+  flutter_rating_bar: ^3.0.1+1
+  flutter_redux: ^0.6.0
+  flutter_rounded_date_picker: ^1.0.4
+  flutter_screenutil: ^1.0.2
+  flutter_staggered_grid_view: ^0.3.2
+  flutter_stetho: ^0.5.0
+  flutter_sticky_header: ^0.5.0
+  flutter_swiper: ^1.1.6
+  flutter_webview_plugin: ^0.3.11
+  fluttertoast: ^7.1.1
+  font_awesome: ^5.10.1
+  font_awesome_flutter: ^8.8.1
+  get_it: ^4.0.0
+  giffy_dialog: ^1.8.0
+  google_fonts: ^1.1.0
+  horizontal_data_table: ^1.0.5+4
+  html: ^0.14.0+4
+  html_builder: ^1.0.5
+  html_editor: ^1.0.1
+  http: ^0.12.2
+  image: ^2.1.19
+  image_picker: ^0.6.7+14
+  image_viewer: ^1.0.0
+  intl: ^0.16.1
   intl_phone_field: ^1.4.2
-  provider: ^4.3.2+2
+  json_serializable: ^3.2.3
   json_table: ^1.4.0
+  json_utilities: ^0.1.3
+  keyboard_visibility: ^0.5.6
+  line_awesome_flutter: ^1.0.1
+  line_icons: ^0.2.0
+  lottie: ^0.4.0+1
+  memoize: ^2.0.0
+  mime: ^0.9.7
+  multi_page_form: ^1.0.4
+  native_pdf_view: ^3.8.0
+  open_file: ^3.0.3
+  path: ^1.7.0
+  path_drawing: ^0.4.1+1
+  path_provider: ^1.6.5
+  path_provider_ex: ^1.0.1
+  pdf: ^1.11.2
+  permission_handler: ^5.0.0+hotfix.9
+  persistent_bottom_nav_bar: ^2.0.5
+  photo_view: ^0.10.3
+  pie_chart: ^4.0.1
+  progress_dialog: ^1.2.4
+  provider: ^4.3.2+2
+  redux_logging: ^0.4.0
+  redux_persist: ^0.8.4
+  redux_persist_flutter: ^0.8.3
+  responsive_grid: ^1.2.1+1
+  rubber: ^0.4.0
+  rxdart: ^0.24.1
+  sanitize_html: ^1.3.0
+  scroll_snap_list: ^0.4.1
+  shared_preferences: ^0.5.8
+  simple_animations: ^1.3.3
+  sliding_card: ^0.1.2
+  sliding_sheet: ^0.3.7
+  sliding_up_panel: ^1.0.2
+  smooth_page_indicator: ^0.2.0
+  sms_otp_auto_verify: ^1.2.2
+  spincircle_bottom_bar: ^1.0.0
+  splashscreen: ^1.2.0
+  syncfusion_flutter_calendar: ^18.3.40
+  table_calendar: ^2.2.3
+  tflite: ^1.1.1
+  timetable: ^0.2.8
+  titled_navigation_bar: ^4.1.0
+  toast: ^0.1.5
+  unique_identifier: ^0.0.3
+  url_launcher: ^5.7.10
+  uuid: ^2.0.4
+  webview_flutter: ^0.3.19+9
+  workmanager: ^0.2.3
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -131,6 +170,8 @@ flutter:
     - assets/images/agfa-7.png
     - assets/images/bayer-1.png
     - assets/images/bayer-2.png
+    - assets/images/dw2.png
+    - assets/images/hapus.png
     - assets/images/bayer-3.png
     - assets/images/bayer-4.png
     - assets/images/bayer-5.png
@@ -139,47 +180,133 @@ flutter:
     - assets/images/careray-1.png
     - assets/images/careray-2.png
     - assets/images/careray-3.png
+    - assets/images/new.png
+    - assets/images/dw.png
     - assets/images/clear-1.png
     - assets/images/clear-2.png
     - assets/images/clear-3.png
     - assets/images/intimedika.png
     - assets/images/facebook.png
     - assets/images/google.png
+    - assets/images/pesawat.png
+    - assets/images/tagihan.png
+    - assets/images/semua.png
+    - assets/images/belanja.png
+    - assets/images/saldo.png
+    - assets/images/dimas.jpg
+    - assets/images/mobileviewer.png
     - assets/
     - assets/images/intiwid-1.png
+    - assets/images/dcmsend.png
+    - assets/images/pw2.png
+    - assets/images/bahasa.png
     - assets/images/intiwid-2.png
+    - assets/images/recycle.png
+    - assets/images/query.png
+    - assets/images/halamanlogin.jpg
+    - assets/images/homeutama.png
     - assets/images/intiwid-3.png
+    - assets/images/homeris.png
+    - assets/images/webviewer.png
+    - assets/images/photo_profile_background.jpg
+    - assets/images/intiwid2.png
+    - assets/images/order.png
+    - assets/images/exam-room.png
+    - assets/svg/dashboard.svg
+    - assets/images/regis.png
     - assets/images/iradimed-1.png
     - assets/images/iradimed-2.png
+    - assets/images/desktop1.png
+    - assets/images/intiwidputih.png
+    - assets/images/efe-kurnaz.jpg
+    - assets/images/chartris.png
+    - assets/images/rodion-kutsaev.jpeg
+    - assets/images/excel.png
+    - assets/images/settings.png
+    - assets/images/steve-johnson.jpeg
+    - assets/images/bs-3.jpg
+    - assets/images/save.png
     - assets/images/
     - assets/images/kunjungan.png
+    - assets/icons/homes.svg
+    - assets/svg/dashboard.svg
+    - assets/images/ipi2.png
+    - assets/images/logo3.png
     - assets/images/resource.png
     - assets/images/penawaran.png
+    - assets/images/about.png
+    - assets/images/eye.png
     - assets/images/sales-activity.png
+    - assets/images/report.png
+    - assets/images/medical-file.png
+    - assets/images/egg_grey.png
+    - assets/images/toko_member.png
+    - assets/images/template.png
+    - assets/images/rispacs.png
     - assets/images/portalsales.jpg
     - assets/images/target.png
     - assets/images/funnel.png
     - assets/images/product.png
     - assets/images/input-funnel.png
     - assets/images/view-funnel.png
+    - assets/images/file.png
     - assets/images/intiwid.png
+    - assets/images/workloadris.png
     - assets/images/gear.png
     - assets/images/userImage1.jpeg
     - assets/images/userImage2.jpeg
     - assets/images/userImage3.jpeg
+    - assets/images/kunjungan1.jpg
+    - assets/images/kunjungan2.jpg
+    - assets/images/userris.png
+    - assets/images/kunjungan3.jpg
+    - assets/images/kunjungan4.jpg
     - assets/images/userImage4.jpeg
     - assets/images/userImage5.jpeg
     - assets/images/userImage6.jpeg
     - assets/images/userImage7.jpeg
     - assets/images/userImage8.jpeg
+    - assets/images/patient.png
     - assets/images/beritakompas.jpg
     - assets/images/home.png
+    - packages/html_editor/summernote/summernote.html
+    - packages/html_editor/summernote/summernote-lite.min.css
+    - packages/html_editor/summernote/summernote-lite.min.js
+    - packages/html_editor/summernote/summernote-lite.min.js.map
+    - packages/html_editor/summernote/jquery-3.4.1.slim.min.js
+    - packages/html_editor/summernote/font/summernote.eot
+    - packages/html_editor/summernote/font/summernote.ttf
+    - packages/html_editor/summernote/font/summernote.woff
+    - packages/html_editor/summernote/font/summernote.woff2
+    - assets/data/sallary.json
+    - assets/json/listpasient.json
     - assets/images/orders.png
     - assets/images/chat.png
     - assets/images/inbox.png
     - assets/images/account.png
     - assets/images/profile_image.png
     - assets/images/liputan6.jpg
+    - assets/images/kunjungansales.png
+    - assets/images/resourcesales.png
+    - assets/images/funnelsales.png
+    - assets/images/penawaransales.png
+    - assets/images/salesactivity.png
+    - assets/images/targetsales.png
+    - assets/images/inputkunjungansales.png
+    - assets/images/laporankunjungansales.png
+    - assets/images/inputfunnelsales.png
+    - assets/images/viewfunnelsales.png
+    - assets/images/directordersales.png
+    - assets/images/target2.png
+    - assets/images/viewpenawaransales.png
+    - assets/images/cari.png
+    - assets/images/pdfsales.png
+    - assets/images/more.png
+    - assets/images/informationsales.png
+    - assets/images/targetsales2.png
+    - assets/images/rejectsales.png
+    - assets/images/profilesales.png
+    - assets/images/injectsales.png
     - assets/images/splash_bg.png
     - assets/images/marketing.png
     - assets/images/ux_design.png
@@ -190,24 +317,28 @@ flutter:
     - assets/images/item_3.png
     - assets/images/agfa.png
     - assets/images/bayer.png
+    - assets/pdf/sales.pdf
     - assets/images/header.jpg
     - assets/images/clear.png
     - assets/images/iradimed.png
     - assets/icons/icon_chat.svg
+    - assets/icons/halaman.svg
     - assets/images/logoportal.png
     - assets/icons/kunjungan.svg
     - assets/icons/icon_gocar.svg
     - assets/icons/icon_gofood.svg
     - assets/icons/icon_goride.svg
+    - assets/icons/patient.svg
     - assets/icons/icon_gosend.svg
     - assets/icons/icon_home.svg
     - assets/icons/icon_profile.svg
-    - assets/icons/icon_promos.svg
     - assets/icons/gear.svg
     - assets/icons/back.svg
     - assets/icons/cart_with_item.svg
+    - assets/icons/clinic.svg
     - assets/icons/notification.svg
     - assets/icons/search.svg
+    - assets/icons/scan.svg
     - assets/icons/shopping-bag.svg
     - assets/images/slider/agfa.png
     - assets/images/slider/bayer.png
@@ -216,9 +347,14 @@ flutter:
     - assets/images/destination_rome.png
     - assets/images/travlog_tokyo.png
     - assets/images/travlog_yogyakarta.png
+    - assets/samples/amp.html
     - assets/svg/
+    - assets/images/wa.png
+    - assets/icons/promo.svg
+    - assets/images/promo.png
     - assets/svg/gear.svg
     - assets/svg/icon_chat.svg
+    - assets/icons/dashboard.svg
     - assets/svg/sales.svg
     - assets/svg/service_car_rental_icon.svg
     - assets/svg/service_flight_icon.svg
@@ -243,6 +379,7 @@ flutter:
     - assets/images/user.png
     - assets/svg/search.svg
     - assets/images/hospital.png
+    - assets/json/template.json
   #  - images/a_dot_ham.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -266,4 +403,3 @@ flutter:
         - asset: assets/fonts/sanomat-grab-web.ttf
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-

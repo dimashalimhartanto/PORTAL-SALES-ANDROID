@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-
+import 'package:PortalSales/tab_home/home_utama.dart';
 import 'package:PortalSales/tab_promos/promos_content.dart';
+import 'package:flutter/material.dart';
 import 'package:rubber/rubber.dart';
 
 class TabPromos extends StatefulWidget {
@@ -36,14 +36,11 @@ class _TabPromosState extends State<TabPromos>
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
   }
 
   @override
   void initState() {
-    // TODO: implement initState
-
     _controller = RubberAnimationController(
         vsync: this,
         initialValue: 1,
@@ -91,9 +88,8 @@ class _TabPromosState extends State<TabPromos>
                   ),
                 ),
                 Expanded(
-                    child: PromosContent(
-                  scrollController: scrollController,
-                )),
+                  child: HalamanDashboard(),
+                ),
               ],
             ),
           ),
@@ -101,6 +97,5 @@ class _TabPromosState extends State<TabPromos>
   }
 
   @override
-  // TODO: implement wantKeepAlive
   bool get wantKeepAlive => true;
 }

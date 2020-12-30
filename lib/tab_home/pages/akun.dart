@@ -56,14 +56,14 @@ class AkunSalesState extends State<AkunSales> {
                   child: Row(
                     children: [
                       Text(
-                        "Akun Saya",
+                        "Profile Sales",
                         style: blackTextFont.copyWith(
                             fontSize: 20, fontWeight: FontWeight.w600),
                       ),
                       Spacer(),
                       Icon(
                         Icons.settings,
-                        color: accentColor3,
+                        color: Colors.cyan[900],
                         size: 24,
                       ),
                       SizedBox(
@@ -71,7 +71,7 @@ class AkunSalesState extends State<AkunSales> {
                       ),
                       Icon(
                         Icons.mail,
-                        color: accentColor3,
+                        color: Colors.cyan[900],
                         size: 24,
                       ),
                       SizedBox(
@@ -79,7 +79,7 @@ class AkunSalesState extends State<AkunSales> {
                       ),
                       Icon(
                         Icons.notifications,
-                        color: accentColor3,
+                        color: Colors.cyan[900],
                         size: 24,
                       ),
                     ],
@@ -104,7 +104,7 @@ class AkunSalesState extends State<AkunSales> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              "Akun Pembeli",
+                              "Akun Sales",
                               style: greenTextFont.copyWith(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 14,
@@ -135,7 +135,7 @@ class AkunSalesState extends State<AkunSales> {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
                             Text(
-                              "Akun Toko",
+                              "Edit Profile Sales",
                               style: greenTextFont.copyWith(
                                 fontWeight: FontWeight.w600,
                                 fontSize: 14,
@@ -184,7 +184,7 @@ class AkunPembeli extends StatelessWidget {
                       color: accentColor3,
                       shape: BoxShape.circle,
                       image: DecorationImage(
-                          image: AssetImage("assets/img/profile.jpg"),
+                          image: AssetImage("assets/images/dimas.jpg"),
                           fit: BoxFit.cover),
                     ),
                   ),
@@ -198,7 +198,7 @@ class AkunPembeli extends StatelessWidget {
                       SizedBox(
                         width: widthSize * 0.4,
                         child: Text(
-                          "Farhan Fadila",
+                          "Dimas Halim Hartanto",
                           style: blackTextFont.copyWith(
                             fontSize: 14,
                             fontWeight: FontWeight.w600,
@@ -244,148 +244,8 @@ class AkunPembeli extends StatelessWidget {
                 ],
               ),
             ),
-            Container(
-              height: 100,
-              width: widthSize - 2 * defaultMargin,
-              margin:
-                  EdgeInsets.symmetric(vertical: 16, horizontal: defaultMargin),
-              padding: EdgeInsets.symmetric(vertical: 20),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(6),
-                boxShadow: [
-                  BoxShadow(
-                    blurRadius: 5,
-                    offset: Offset(0, 1),
-                    color: accentColor3.withOpacity(0.3),
-                  ),
-                ],
-              ),
-              child: Row(
-                children: [
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 18,
-                            width: 18,
-                            child: Image.asset(
-                              "assets/img/egg_grey.png",
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            "TokoPoints",
-                            style: blackTextFont.copyWith(
-                              fontSize: 12,
-                            ),
-                          ),
-                          Spacer(),
-                          Text(
-                            "0 Points",
-                            style: blackTextFont.copyWith(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  VerticalDivider(
-                    color: Color(0xFFE4E4E4),
-                    thickness: 1.5,
-                    width: 2,
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 18,
-                            width: 18,
-                            child: Image.asset(
-                              "assets/img/promo.png",
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            "Kupon Saya",
-                            style: blackTextFont.copyWith(
-                              fontSize: 12,
-                            ),
-                          ),
-                          Spacer(),
-                          Text(
-                            "10 Kupon",
-                            style: blackTextFont.copyWith(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  VerticalDivider(
-                    color: Color(0xFFE4E4E4),
-                    thickness: 1.5,
-                    width: 2,
-                  ),
-                  Expanded(
-                    flex: 1,
-                    child: Container(
-                      width: double.infinity,
-                      height: double.infinity,
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          Container(
-                            height: 18,
-                            width: 18,
-                            child: Image.asset(
-                              "assets/img/toko_member.png",
-                              fit: BoxFit.contain,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            "TokoMember",
-                            style: blackTextFont.copyWith(
-                              fontSize: 12,
-                            ),
-                          ),
-                          Spacer(),
-                          Text(
-                            "100",
-                            style: blackTextFont.copyWith(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+            SizedBox(
+              height: 19,
             ),
             // NOTE: Dana Tokopedia
             Container(
@@ -415,7 +275,7 @@ class AkunPembeli extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Text(
-                            "Dana Tokopedia",
+                            "Target Sales ",
                             style: blackTextFont.copyWith(
                               fontSize: 16,
                               fontWeight: FontWeight.w600,
@@ -493,7 +353,8 @@ class AkunPembeli extends StatelessWidget {
                                 width: 30,
                                 decoration: BoxDecoration(
                                   image: DecorationImage(
-                                    image: AssetImage("assets/img/saldo.png"),
+                                    image:
+                                        AssetImage("assets/images/saldo.png"),
                                     fit: BoxFit.contain,
                                   ),
                                 ),
@@ -531,7 +392,7 @@ class AkunPembeli extends StatelessWidget {
                 margin: EdgeInsets.symmetric(
                     vertical: 16, horizontal: defaultMargin),
                 child: Text(
-                  "Transaksi",
+                  "Transaksi Pembayaran",
                   style: blackTextFont.copyWith(
                     fontSize: 16,
                     fontWeight: FontWeight.w600,
@@ -618,7 +479,7 @@ class AkunPembeli extends StatelessWidget {
                           width: 40,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage("assets/img/belanja.png"),
+                              image: AssetImage("assets/images/belanja.png"),
                             ),
                           ),
                         ),
@@ -652,7 +513,7 @@ class AkunPembeli extends StatelessWidget {
                           width: 40,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage("assets/img/tagihan.png"),
+                              image: AssetImage("assets/images/tagihan.png"),
                             ),
                           ),
                         ),
@@ -686,7 +547,7 @@ class AkunPembeli extends StatelessWidget {
                           width: 40,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: AssetImage("assets/img/pesawat.png"),
+                              image: AssetImage("assets/images/pesawat.png"),
                             ),
                           ),
                         ),
@@ -697,40 +558,6 @@ class AkunPembeli extends StatelessWidget {
                           width: double.infinity,
                           child: Text(
                             "Pesawat",
-                            style: blackTextFont.copyWith(
-                              fontSize: 12,
-                            ),
-                            textAlign: TextAlign.center,
-                            overflow: TextOverflow.fade,
-                            maxLines: 2,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    width: 60,
-                    height: double.infinity,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Container(
-                          height: 40,
-                          width: 40,
-                          decoration: BoxDecoration(
-                            image: DecorationImage(
-                              image: AssetImage("assets/img/semua.png"),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        SizedBox(
-                          width: double.infinity,
-                          child: Text(
-                            "Lihat Semua",
                             style: blackTextFont.copyWith(
                               fontSize: 12,
                             ),
@@ -1155,16 +982,16 @@ class AkunToko extends StatelessWidget {
             Container(
               height: 100,
               decoration: BoxDecoration(
-                color: Colors.white,
+                color: Colors.transparent,
                 image: DecorationImage(
-                    image: AssetImage("assets/img/toko_member.png")),
+                    image: AssetImage("assets/images/intimedika.png")),
               ),
             ),
             SizedBox(
               height: 20,
             ),
             Text(
-              "Upsssss !",
+              "Silahkan Edit",
               style: blackTextFont.copyWith(
                 fontSize: 18,
                 fontWeight: FontWeight.w600,
@@ -1174,7 +1001,7 @@ class AkunToko extends StatelessWidget {
               height: 10,
             ),
             Text(
-              "Anda belum punya toko",
+              "Profile anda disini",
               style: greyTextFont.copyWith(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
