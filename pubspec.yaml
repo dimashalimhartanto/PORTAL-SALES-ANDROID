@@ -1,0 +1,269 @@
+name: PortalSales
+description: A new Flutter project.
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.8.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  dio: ^3.0.9
+
+  font_awesome: ^5.10.1
+  multi_page_form: ^1.0.4
+  animated_text_kit: ^2.2.0
+  carousel_pro: ^1.0.0
+  csv: ^4.0.3
+  json_utilities: ^0.1.3
+  splashscreen: ^1.2.0
+  carousel_slider: ^2.2.1
+  intl: ^0.16.1
+  line_icons: ^0.2.0
+  shared_preferences: ^0.5.8
+  line_awesome_flutter: ^1.0.1
+  flutter_screenutil: ^1.0.2
+  animated_theme_switcher: ^1.0.5
+  stream_chat_flutter: ^0.1.35
+  get_it: ^4.0.0
+  uuid: ^2.0.4
+  custom_splash: ^0.0.2
+  fancy_bottom_navigation: ^0.3.2
+  rubber: ^0.4.0
+  sliding_up_panel: ^1.0.2
+  bubble_tab_indicator: "^0.1.4"
+  scroll_snap_list: ^0.4.1
+  json_serializable: ^3.2.3
+  sliding_card: ^0.1.2
+
+  dash_chat: ^1.1.10
+  url_launcher: ^5.2.0
+  flutter_chat_bar: ^0.0.1
+  table_calendar: ^2.2.3
+  horizontal_data_table: ^1.0.5+4
+  animated_splash: ^1.0.0
+  flutter_stetho: ^0.5.0
+  flare_splash_screen: ^3.0.1
+  flutter_clean_calendar: ^1.0.2+1
+  spincircle_bottom_bar: ^1.0.0
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+  curved_navigation_bar: ^0.3.3
+  titled_navigation_bar: ^4.1.0
+  flutter_rounded_date_picker: ^1.0.4
+  ff_navigation_bar: ^0.1.4
+  persistent_bottom_nav_bar: ^2.0.5
+  syncfusion_flutter_calendar: ^18.2.45
+  flutter_pdfview: ^1.0.0+10
+  path_provider: ^1.6.5
+  simple_animations: ^1.3.3
+  flutter_login: ^1.0.14
+  badges: ^1.1.1
+  lottie: ^0.4.0+1
+  google_fonts: ^1.1.0
+  cached_network_image: ^2.2.0+1
+  bubble_bottom_bar: ^1.2.0
+  webview_flutter: ^0.3.19+9
+  smooth_page_indicator: ^0.2.0
+  permission_handler: ^5.0.0+hotfix.9
+  sliding_sheet: ^0.3.7
+  sms_otp_auto_verify: ^1.2.2
+  giffy_dialog: ^1.8.0
+  flutter_icons: ^1.1.0
+  font_awesome_flutter: ^8.8.1
+  eva_icons_flutter: ^2.0.1
+  flutter_swiper: ^1.1.6
+  data_tables: ^1.0.3
+  http: ^0.12.2
+  flutter_custom_clippers: ^1.1.2
+  file_picker: ^1.13.3
+  cloud_firestore: ^0.14.0+2
+  firebase_auth: ^0.18.0+1
+  keyboard_visibility: ^0.5.6
+  bottom_navy_bar: ^5.5.0
+  direct_select_flutter: ^1.0.6
+  flutter_rating_bar: ^3.0.1+1
+  flutter_staggered_grid_view: ^0.3.2
+  fluttertoast: ^7.1.1
+  flushbar: ^1.10.4
+  flutter_svg: ^0.19.0
+  country_code_picker: ^1.5.0
+  intl_phone_field: ^1.4.2
+  provider: ^4.3.2+2
+  json_table: ^1.4.0
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  effective_dart: ^1.0.0
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+# The following section is specific to Flutter.
+flutter:
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/background.png
+    - assets/illustration.png
+    - assets/icons/
+    - assets/images/agfa-1.png
+    - assets/images/agfa-2.png
+    - assets/images/agfa-3.png
+    - assets/images/agfa-4.png
+    - assets/images/agfa-5.png
+    - assets/images/agfa-6.png
+    - assets/images/agfa-7.png
+    - assets/images/bayer-1.png
+    - assets/images/bayer-2.png
+    - assets/images/bayer-3.png
+    - assets/images/bayer-4.png
+    - assets/images/bayer-5.png
+    - assets/images/bayer-6.png
+    - assets/images/bayer-7.png
+    - assets/images/careray-1.png
+    - assets/images/careray-2.png
+    - assets/images/careray-3.png
+    - assets/images/clear-1.png
+    - assets/images/clear-2.png
+    - assets/images/clear-3.png
+    - assets/images/intimedika.png
+    - assets/images/facebook.png
+    - assets/images/google.png
+    - assets/
+    - assets/images/intiwid-1.png
+    - assets/images/intiwid-2.png
+    - assets/images/intiwid-3.png
+    - assets/images/iradimed-1.png
+    - assets/images/iradimed-2.png
+    - assets/images/
+    - assets/images/kunjungan.png
+    - assets/images/resource.png
+    - assets/images/penawaran.png
+    - assets/images/sales-activity.png
+    - assets/images/portalsales.jpg
+    - assets/images/target.png
+    - assets/images/funnel.png
+    - assets/images/product.png
+    - assets/images/input-funnel.png
+    - assets/images/view-funnel.png
+    - assets/images/intiwid.png
+    - assets/images/gear.png
+    - assets/images/userImage1.jpeg
+    - assets/images/userImage2.jpeg
+    - assets/images/userImage3.jpeg
+    - assets/images/userImage4.jpeg
+    - assets/images/userImage5.jpeg
+    - assets/images/userImage6.jpeg
+    - assets/images/userImage7.jpeg
+    - assets/images/userImage8.jpeg
+    - assets/images/beritakompas.jpg
+    - assets/images/home.png
+    - assets/images/orders.png
+    - assets/images/chat.png
+    - assets/images/inbox.png
+    - assets/images/account.png
+    - assets/images/profile_image.png
+    - assets/images/liputan6.jpg
+    - assets/images/splash_bg.png
+    - assets/images/marketing.png
+    - assets/images/ux_design.png
+    - assets/images/photography.png
+    - assets/images/business.png
+    - assets/images/sales.jpg
+    - assets/images/item_1.png
+    - assets/images/item_3.png
+    - assets/images/agfa.png
+    - assets/images/bayer.png
+    - assets/images/header.jpg
+    - assets/images/clear.png
+    - assets/images/iradimed.png
+    - assets/icons/icon_chat.svg
+    - assets/images/logoportal.png
+    - assets/icons/kunjungan.svg
+    - assets/icons/icon_gocar.svg
+    - assets/icons/icon_gofood.svg
+    - assets/icons/icon_goride.svg
+    - assets/icons/icon_gosend.svg
+    - assets/icons/icon_home.svg
+    - assets/icons/icon_profile.svg
+    - assets/icons/icon_promos.svg
+    - assets/icons/gear.svg
+    - assets/icons/back.svg
+    - assets/icons/cart_with_item.svg
+    - assets/icons/notification.svg
+    - assets/icons/search.svg
+    - assets/icons/shopping-bag.svg
+    - assets/images/slider/agfa.png
+    - assets/images/slider/bayer.png
+    - assets/images/destination_bali.png
+    - assets/images/destination_paris.png
+    - assets/images/destination_rome.png
+    - assets/images/travlog_tokyo.png
+    - assets/images/travlog_yogyakarta.png
+    - assets/svg/
+    - assets/svg/gear.svg
+    - assets/svg/icon_chat.svg
+    - assets/svg/sales.svg
+    - assets/svg/service_car_rental_icon.svg
+    - assets/svg/service_flight_icon.svg
+    - assets/svg/service_hotel_icon.svg
+    - assets/gif/banner.gif
+    - assets/welcome.json
+    - assets/json1.json
+    - assets/bisnis.json
+    - assets/bisnis2.json
+    - assets/icons/home_selected.svg
+    - assets/icons/home.svg
+    - assets/icons/feed_selected.svg
+    - assets/icons/feed.svg
+    - assets/icons/official_selected.svg
+    - assets/icons/official.svg
+    - assets/icons/keranjang_selected.svg
+    - assets/icons/keranjang.svg
+    - assets/icons/akun_selected.svg
+    - assets/icons/akun.svg
+    - assets/images/keuangan.png
+    - assets/svg/menu.svg
+    - assets/images/user.png
+    - assets/svg/search.svg
+    - assets/images/hospital.png
+  #  - images/a_dot_ham.jpeg
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: Sanomat Grab Web
+      fonts:
+        - asset: assets/fonts/Lato-Regular.ttf
+        - asset: assets/fonts/Lato-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Lato-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Lato-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/sanomat-grab-web.ttf
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
+

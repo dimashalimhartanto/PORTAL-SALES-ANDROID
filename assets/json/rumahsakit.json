@@ -1,0 +1,27 @@
+{
+    "previous": "Some URL for previous page",
+    "next": "Some URL for next page",
+    "results": [{
+            "nama_kunjungan": "4063",
+            "hp_kunjungan": "",
+            "email_kunjungan": "",
+            "jabatan_kunjungan": "Radiographer",
+            "rs_kunjungan": "RS Umum Prikasih",
+            "alamat_kunjungan": "Jl. RS Fatmawati Raya No. 74, Pd. Labu-Cilandak",
+            "tlp_kunujungan": "7504669.0",
+            "req_kunjungan": "Penawaran Film DT2B",
+            "hasil_kunjungan": "Meminta penawaran DT2B"
+        },
+        {
+            "nama_kunjungan": "Nurhuda",
+            "hp_kunjungan": "085692738143",
+            "email_kunjungan": "",
+            "jabatan_kunjungan": "Ka Radiology",
+            "rs_kunjungan": "RS Kanker Dharmais",
+            "alamat_kunjungan": "Jl. S Parman Kav.84-86 Slipi Jakarta Barat",
+            "tlp_kunjungan": "021-5681570",
+            "req_kunjungan": "Penawaran Syringe Injector Salient D",
+            "hasil_kunjungan": "Penawaran Syringe Injector Salient D"
+        }
+    ]
+}
